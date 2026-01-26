@@ -1,3 +1,12 @@
+const MainUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"; //manca ?q= ....
+
+//prendo dati
+/*
+const url = location.search;
+console.log("url", url);
+const allTheParameters = new URLSearchParams(url);
+const AlbumID = allTheParameters.get("AlbumID");
+*/
 const AlbumID = 12209331; //da cancellare
 const GetAlbum = function () {
   fetch(MainUrl + AlbumID)
