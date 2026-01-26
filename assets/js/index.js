@@ -1,21 +1,19 @@
 //collegare a home page
-const mainUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen";
-
-const getEvents = function () {
-  fetch(mainUrl)
+const MainUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"; //manca ?q= ....
+const GetData = function (url) {
+  fetch(url)
     .then((res) => {
-      console.log("RESPONSE", res);
-      if (res.ok) {
-        return res.json();
-      } else {
-        throw new Error("La response ha un problema");
+      if (!res.ok) {
+        throw new Error("Errore nel ricevere i dati");
       }
+      return res.json();
     })
     .then((data) => {
-      console.log("EVENTI RICEVUTI:", data);
+      console.log("dati ", data);
+      //altro codice da prendere
+    })
+    .catch((err) => {
+      console.log("Errore catch", err);
     });
-}.catch((err) => {
-  console.log("ERRORE NELLA FETCH", err);
-});
-
-getEvents();
+};
+GetData(MainUrl);
