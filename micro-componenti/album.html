@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Album Page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,46 +13,230 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
   </head>
   <body>
-    <section>
-      <div class="container text-center">
-        <div id="row-album" class="row align-items-center mt-5">
-          <!--codice js-->
-        </div>
-      </div>
-    </section>
-    <!--fine prima section-->
-    <section class="container-fluid d-flex justify-content-start align-items-center ps-5 mt-5 bg-secondary">
-      <div class="me-3">
-        <a href="#"> <i class="bi bi-play-circle-fill"></i></a>
-      </div>
-      <div class="me-3">
-        <a href="#"><i class="bi bi-heart"></i></a>
-      </div>
-      <div class="me-3">
-        <a href="#"><i class="bi bi-arrow-down-circle"></i></a>
-      </div>
-      <div class="me-3">
-        <a href="#"><i class="bi bi-three-dots"></i></a>
-      </div>
-    </section>
-    <!--fine seconda section con le icone-->
-    <!--inizio sopratitoli-->
-    <div class="container text-center">
-      <div class="row d-flex justufy-content-space-around align-items-start border-bottom border-2">
-        <div class="col">#</div>
-        <div class="col"># Titolo</div>
-        <div class="col">Riproduzioni</div>
-        <div class="col">
-          <i class="bi bi-stopwatch"></i>
-        </div>
-      </div>
-      <!--inizio canzoni-->
+<main class="container-fluid p-0">
+      <div class="row">
+        <!-- SIDEBAR SINISTRA -->
+        <aside class="col-md-3 d-none d-md-block p-0">
+          <nav class="sidebar flex-grow-1 fs-2">
+            <div class="dropdown d-none d-md-block px-3 pt-3">
+              <button class="btn btn-dark p-0" data-bs-toggle="dropdown">
+                <i class="bi bi-three-dots fs-4"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                <li><a class="dropdown-item" href="#">Account</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+            <!-- MENU -->
+            <div class="sidebar-top mb-5">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active fs-4" href="#"> <i class="bi bi-house-door me-2"></i> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-4" href="#"> <i class="bi bi-search me-2"></i> Cerca </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-4" href="#"> <i class="bi bi-collection me-2"></i> Libreria </a>
+                </li>
+              </ul>
+            </div>
 
-      <div id="row-canzoni" class="row d-flex justufy-content-space-around align-items-start">
-        <!--inizio codice js-->
-      </div>
-    </div>
+            <!-- AZIONI -->
+            <div class="mb-4">
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-4 p-3"
+                ><img src="https://www.aisongmaker.io/_next/static/media/icon.71189d61.png" alt="" class="icon-img me-2" />
+                Crea playlist
+              </a>
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-4 p-3"
+                ><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840c489c9523ae48b2c3d96177" alt="" class="icon-img me-2" />
+                Brani che ti piacciono
+              </a>
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-4 p-3"
+                ><img src="https://tse4.mm.bing.net/th/id/OIP.JyK9dWOfKvowsZeLB5u9OAHaHa?pid=Api&P=0&h=180" alt="" class="icon-img me-2" />
+                I tuoi episodi
+              </a>
+            </div>
+            <hr class="text-secondary my-3" />
 
+            <!-- PLAYLIST SCROLL -->
+            <div class="sidebar-scroll">
+              <ul class="playlist-list text-secondary fs-4 list-style-none ps-3">
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li class="mb-2">Francesco Guccini Mix</li>
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li class="mb-2">Francesco Guccini Mix</li>
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li class="mb-2">Francesco Guccini Mix</li>
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li class="mb-2">Francesco Guccini Mix</li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+
+        <!-- MAIN (IL TUO, INVARIATO) -->
+        <section class="overflow-auto col-md-7 p-0" style="height: 40vh" id="colonna-principale">
+          <!-- 🔴 QUI RESTA TUTTO IL TUO CODICE ESISTENTE -->
+          <nav class="navbar mx-2 navbar-expand-lg navbar-dark d-flex flex-row justify-content-between">
+            <!-- Bottoni di sinistra -->
+            <div class="justify-content-start">
+              <button type="button" class="btn btn-outline-light rounded-circle" id="btn-pages">&lt;</button>
+              <button type="button" class="btn btn-outline-light rounded-circle" id="btn-pages">&gt;</button>
+            </div>
+            <!-- dropdown di destra -->
+            <div class="justify-content-end">
+              <div class="btn-group">
+                <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="dropdown-central-page">
+                  <img src="../assets/imgs/main/image-1.jpg" alt="Foto profilo" class="rounded-circle me-2" width="30" height="30" />
+                  Ernesto Scorzelli
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!--madonna-->
+           <!-- SIDEBAR DESTRA -->
+        <aside class="col-md-2 d-none d-md-block bg-black text-white">
+          <div class="main-content">
+            <h1>Contenuto principale</h1>
+            <p>Qui c'è il tuo layout. Questo prende tutto lo spazio disponibile.</p>
+          </div>
+
+          <aside class="right-sidebar bg-black p-3">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="m-0">Attività amici</p>
+              <div>
+                <button class="btn p-1 text-light">
+                  <i class="fa-regular fa-id-badge"></i>
+                </button>
+                <button class="btn p-1 text-light">
+                  <i class="fa-solid fa-x"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- amico1 -->
+            <div class="d-flex gap-2 mb-3">
+              <img src="https://placedog.net/400" class="rounded-5" />
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <span>Charlie Hookham</span>
+                  <span class="text-secondary small">4 ore</span>
+                </div>
+                <div class="text-secondary small">
+                  In Camera · Yumi Zouma <br />
+                  <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                </div>
+              </div>
+            </div>
+
+            <!-- amico2 -->
+            <div class="d-flex gap-2 mb-3">
+              <img src="https://placedog.net/500" class="rounded-5" />
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <span>lightdark02</span>
+                  <span class="text-secondary small">8 ore</span>
+                </div>
+                <div class="text-secondary small">
+                  Almed to Kill · Jade LeMac <br />
+                  <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                </div>
+              </div>
+            </div>
+
+            <!-- amico3 -->
+            <div class="d-flex gap-2">
+              <img src="https://placedog.net/600" class="rounded-5" />
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <span>Valeria Traverso</span>
+                  <span class="text-secondary small">3 giorni</span>
+                </div>
+                <div class="text-secondary small">
+                  Now Kings · Sleeping Wolf <br />
+                  <i class="fa-solid fa-music"></i> Twint Badass mood
+                </div>
+              </div>
+            </div>
+          </aside>
+        </aside>
+      </div>
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
