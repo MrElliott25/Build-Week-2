@@ -49,3 +49,4 @@ const GetAlbum = function () {
     });
 };
 GetAlbum();
+// fare funzione per colore dell'album
