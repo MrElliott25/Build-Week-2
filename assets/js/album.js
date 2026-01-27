@@ -31,13 +31,13 @@ const stampatitolo = function (album) {
   const rowA = document.getElementById("row-album");
 
   rowA.innerHTML += `
-         <div class="col"><img src="${album.cover}" alt="${album.title}" /></div>
+         <div class="col"><img src="${album.cover_medium}" alt="${album.title}" /></div>
           <div class="col p-1">
             <div class="text-start">
               <p>ALBUM</p>
               <h1 class="pb-4">${album.title}</h1>
               <div class="d-flex align-items-center">
-                <img class="rounded-5" src="${album.artist.picture}" alt="${album.artist.name}" />
+                <img class="rounded-5 ms-3" src="${album.artist.picture_small}" alt="${album.artist.name}" />
                 <p>${album.artist.name} &middot; anno &middot; lunghezza , <span class="text-secondary">${album.tracks.data.length} Brani</span></p>
               </div>
             </div>
