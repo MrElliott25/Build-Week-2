@@ -14,9 +14,9 @@ const GetData = function (url) {
       const dati = data.data;
       console.log(dati[0]);
       //altro codice da prendere
-      const map = document.querySelectorAll(".mapp");
+      const map = document.querySelector(".mapp");
       map.innerHTML += `
-      <a href="../micro-componenti/album.html?AlbumID=${dati[0].id}" class="btn btn-primary w-100">VAI AI DETTAGLI</a>
+      <a href="../../micro-componenti/album.html?AlbumID=${dati[0].album.id}" class="btn btn-primary w-100">VAI AI DETTAGLI</a>
       `;
     })
     .catch((err) => {
