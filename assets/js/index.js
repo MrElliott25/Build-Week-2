@@ -10,7 +10,14 @@ const GetData = function (url) {
     })
     .then((data) => {
       console.log("dati ", data);
+
+      const dati = data.data;
+      console.log(dati[0]);
       //altro codice da prendere
+      const map = document.querySelectorAll(".mapp");
+      map.innerHTML += `
+      <a href="../micro-componenti/album.html?AlbumID=${dati[0].id}" class="btn btn-primary w-100">VAI AI DETTAGLI</a>
+      `;
     })
     .catch((err) => {
       console.log("Errore catch", err);
