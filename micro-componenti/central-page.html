@@ -16,8 +16,8 @@
   <body>
     <main class="main-section">
       <div class="row row-cols-3">
-        <div class="col-2 bg-black"><p class="text-white">Sidebar 1</p></div>
-        <div class="col-8" id="colonna-principale">
+        <div class="col-md-3 d-none d-md-block bg-black"><p class="text-white">Sidebar 1</p></div>
+        <div class="col-7 flex-sm-grow-1" id="colonna-principale">
           <!-- Navbar -->
           <nav class="navbar navbar-expand-lg navbar-dark d-flex flex-row justify-content-between">
             <!-- Bottoni di sinistra -->
@@ -59,37 +59,35 @@
           </div>
 
           <!-- 6 Album piu ascoltati -->
-          <div class="container mt-4">
+          <div class="container mt-4 p-0">
             <h2 class="text-white mb-3" id="buonasera">Buonasera</h2>
 
             <!-- prima riga -->
-            <div class="container gap-3 d-flex">
-              <div class="col d-flex flex-row align-items-center rounded" id="box-playlist">
+            <div class="row gap-md-3 gap-sm-1">
+              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-2.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
-                <p class="text-white fw-bold ms-3">pov: la tua estate e' un film</p>
+                <p class="text-white fw-bold ms-3 sm text-truncate">pov: la tua estate e' un film</p>
               </div>
-              <div class="col d-flex flex-row align-items-center rounded" id="box-playlist">
+              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-3.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
-                <p class="text-white fw-bold ms-3">Massima Concentrazione</p>
+                <p class="text-white fw-bold ms-3 sm text-truncate">Massima Concentrazione</p>
               </div>
-              <div class="col d-flex flex-row align-items-center rounded" id="box-playlist">
+              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-4.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
-                <p class="text-white fw-bold ms-3">Peaceful Piano</p>
+                <p class="text-white fw-bold ms-3 sm text-truncate">Peaceful Piano</p>
               </div>
-            </div>
-            <!-- seconda riga -->
-            <div class="container gap-3 d-flex mt-3">
-              <div class="col d-flex flex-row align-items-center rounded" id="box-playlist">
+              <!-- seconda riga -->
+              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-5.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
-                <p class="text-white fw-bold ms-3">lofi beats</p>
+                <p class="text-white fw-bold ms-3 sm text-truncate">lofi beats</p>
               </div>
-              <div class="col d-flex flex-row align-items-center rounded" id="box-playlist">
+              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-6.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
-                <p class="text-white fw-bold ms-3">Jazz Vibes</p>
+                <p class="text-white fw-bold ms-3 sm text-truncate">Jazz Vibes</p>
               </div>
-              <div class="col d-flex flex-row align-items-center rounded" id="box-playlist">
+              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-7.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
-                <p class="text-white fw-bold ms-3">Caffe' del Buongiorno</p>
+                <p class="text-white fw-bold ms-3 sm text-truncate">Caffe' del Buongiorno</p>
               </div>
             </div>
           </div>
@@ -363,7 +361,7 @@
         </div>
 
         <!--  -->
-        <div class="col-2 bg-black"><p class="text-white">Sidebar 2</p></div>
+        <div class="col-2 d-none d-md-block bg-black"><p class="text-white">Sidebar 2</p></div>
       </div>
       <footer class="bg-black text-center text-white py-3">
         <p class="mb-0">© 2024 Progetto U2-W3. All rights reserved.</p>
