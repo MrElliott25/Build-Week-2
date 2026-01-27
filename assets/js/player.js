@@ -1,15 +1,40 @@
-const searchAPI = "https://striveschool-api.herokuapp.com/api/deezer/search?q=kid yugi";
-const albumAPI = "https://striveschool-api.herokuapp.com/api/deezer/album/820121831";
+const searchAPI = "https://striveschool-api.herokuapp.com/api/deezer/search?q=fellini";
+const albumAPI = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const artistAPI = "https://striveschool-api.herokuapp.com/api/deezer/artist/139795852";
+let albumID = 820121831;
+let trackID = 3552598331;
 
-let currentTrackURL =
-  "https://cdnt-preview.dzcdn.net/api/1/1/5/b/2/0/5b2f00a13f04d41de643adf3b84a671d.mp3?hdnea=exp=1769437475~acl=/api/1/1/5/b/2/0/5b2f00a13f04d41de643adf3b84a671d.mp3*~data=user_id=0,application_id=42~hmac=dfa7556a9fba7e62932de1b7cef74be50bfd57d0655dc03e8d1ef0c11534a509";
+function getTrackInfo(albumID, trackID) {
+  fetch(albumAPI + albumID)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      return data.tracks;
+    })
+    .then((tracks) => {
+      tracks.data.forEach((track) => {
+        if (track.id === trackID) {
+          console.log(track);
+          setTrack(track.preview);
+          setTrackName(track.artist.name, track.title);
+          console.log(track.album.cover);
+          setTrackImg(track.album.cover_small);
+        }
+      });
+    })
+
+    .catch((err) => {
+      console.log("Errore: " + err);
+    });
+}
+
+getTrackInfo(albumID, trackID);
 
 function setTrack(currentTrackURL) {
   const currentTrack = new Audio(currentTrackURL);
   const allPlayBtn = document.querySelectorAll(".play");
 
-  setTrackName(currentTrack);
   setTrackTime(currentTrack);
 
   //Funzioni START e PAUSE
@@ -28,25 +53,98 @@ function setTrack(currentTrackURL) {
   });
 }
 
-function setTrackName(currentTrack) {
-  const trackName = document.querySelectorAll(".songname");
-  const artistName = document.querySelector(".artist");
+function setTrackName(artistName, trackName) {
+  const trackSpans = document.querySelectorAll(".songname");
+  const artistSpan = document.querySelector(".artist");
+
+  trackSpans.forEach((span) => {
+    span.innerText = trackName;
+  });
+  artistSpan.innerText = artistName;
 }
 
-//Funzione per settare il tempo minimo e massimo formattato, e per aggiornare la barra
+//Funzione per settare il tempo minimo e massimo formattato, per aggiornare la barra e per renderla interattiva
 function setTrackTime(currentTrack) {
   const trackTime = document.querySelector(".tempo");
   const trackMaxTime = document.querySelector(".tempo-max");
-  const progressBar = document.querySelector(".progress-fill");
+  const progressBar = document.querySelector(".progress-bar-custom");
+  const progressBarOngoing = document.querySelector(".progress-fill");
+  let isDragging = false;
+  let isDraggingProcess = false;
+
+  //Aggiunge il listener che sul click porta la canzone a dove hai clickato e ne gestisce il trascinamento
+  const updateTime = function (e) {
+    const width = progressBar.clientWidth;
+
+    const rettangolo = progressBar.getBoundingClientRect();
+    let x = (e.clientX || (e.touches ? e.touches[0].clientX : 0)) - rettangolo.left;
+
+    const duration = currentTrack.duration;
+
+    let percentage = x / width;
+    if (percentage < 0) percentage = 0;
+    if (percentage > 1) percentage = 1;
+
+    currentTrack.currentTime = percentage * duration;
+  };
+  progressBar.addEventListener("mousedown", (e) => {
+    isDraggingProcess = true;
+    updateTime(e);
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (isDraggingProcess) {
+      updateTime(e);
+    }
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDraggingProcess = false;
+  });
 
   currentTrack.addEventListener("timeupdate", () => {
     const progress = (currentTrack.currentTime / currentTrack.duration) * 100;
-    progressBar.style.width = `${progress}%`;
+    progressBarOngoing.style.width = `${progress}%`;
     trackTime.innerText = formatTime(currentTrack.currentTime);
   });
 
   currentTrack.addEventListener("loadedmetadata", () => {
     trackMaxTime.innerText = formatTime(currentTrack.duration);
+  });
+
+  //Aggiunge il listener per sistemare il volume della traccia
+  const volumeBar = document.getElementById("volume-bar");
+  const volumeBarFill = document.getElementById("volume-bar-fill");
+
+  const updateVolume = function (e) {
+    const rettangolo = volumeBar.getBoundingClientRect();
+    const widthRettangolo = rettangolo.width;
+
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+
+    let x = clientX - rettangolo.left;
+    let newVolume = x / widthRettangolo;
+
+    if (newVolume < 0) newVolume = 0;
+    if (newVolume > 1) newVolume = 1;
+
+    currentTrack.volume = newVolume;
+    volumeBarFill.style.width = newVolume * 100 + "%";
+  };
+
+  volumeBar.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    updateVolume(e);
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+      updateVolume(e);
+    }
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
   });
 }
 
@@ -57,48 +155,11 @@ function formatTime(seconds) {
   return `${min}:${sec < 10 ? "0" + sec : sec}`;
 }
 
-setTrack(currentTrackURL);
+function setTrackImg(trackImg) {
+  const playersImgs = document.querySelectorAll(".player-img");
 
-//FETCH DA RIMUOVERE ALLA FINE
-fetch(albumAPI)
-  .then((res) => {
-    if (res.ok) {
-      return res.json();
-    } else {
-      throw new Error("Errore nel recupero dati");
-    }
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log("Errore: ", err);
+  playersImgs.forEach((img) => {
+    img.src = trackImg;
+    console.log(img.src);
   });
-fetch(searchAPI)
-  .then((res) => {
-    if (res.ok) {
-      return res.json();
-    } else {
-      throw new Error("Errore nel recupero dati");
-    }
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log("Errore: ", err);
-  });
-fetch(artistAPI)
-  .then((res) => {
-    if (res.ok) {
-      return res.json();
-    } else {
-      throw new Error("Errore nel recupero dati");
-    }
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log("Errore: ", err);
-  });
+}
