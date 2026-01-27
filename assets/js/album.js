@@ -1,4 +1,4 @@
-//prendo dati
+// PRENDO DATI DA URL
 const url = location.search;
 const allTheParameters = new URLSearchParams(url);
 const AlbumID = allTheParameters.get("AlbumID");
@@ -8,54 +8,118 @@ const MainUrl = `https://striveschool-api.herokuapp.com/api/deezer/album/${Album
 const GetAlbum = function () {
   fetch(MainUrl)
     .then((res) => {
-      if (!res.ok) {
-        throw new Error("Errore nel ricevere i dati");
-      }
+      if (!res.ok) throw new Error("Errore nel ricevere i dati");
       return res.json();
     })
     .then((album) => {
-      console.log("ALBUM:", album);
-
       stampatitolo(album);
       stampacanzoni(album.tracks.data);
     })
-    .catch((err) => {
-      console.log("Errore catch", err);
-    });
+    .catch((err) => console.log("Errore:", err));
 };
 
 GetAlbum();
-
-// fare funzione per colore dell'album
+//FUNZIONI
 const stampatitolo = function (album) {
   const rowA = document.getElementById("row-album");
 
-  rowA.innerHTML += `
-         <div class="col"><img src="${album.cover_medium}" alt="${album.title}" /></div>
-          <div class="col p-1">
-            <div class="text-start">
-              <p>ALBUM</p>
-              <h1 class="pb-4">${album.title}</h1>
-              <div class="d-flex align-items-center">
-                <img class="rounded-5 ms-3" src="${album.artist.picture_small}" alt="${album.artist.name}" />
-                <p>${album.artist.name} &middot; anno &middot; lunghezza , <span class="text-secondary">${album.tracks.data.length} Brani</span></p>
-              </div>
-            </div>
-          </div>
-      `;
+  rowA.innerHTML = `
+    <div class="col">
+      <img
+        id="album-cover"
+        src="${album.cover_medium}"
+        crossorigin="anonymous"
+        alt="${album.title}"
+      />
+    </div>
+    <div class="col p-1 text-start">
+      <p>ALBUM</p>
+      <h1>${album.title}</h1>
+      <p>${album.artist.name} · ${album.tracks.data.length} brani</p>
+    </div>
+  `;
+
+  const img = document.getElementById("album-cover");
+
+  img.onload = () => applyAlbumColor(img);
 };
+
+// STAMPA CANZONI
 const stampacanzoni = function (tracks) {
   const row = document.getElementById("row-canzoni");
-  tracks.forEach((element, index) => {
+
+  tracks.forEach((track, index) => {
     row.innerHTML += `
-        <div class="row mb-2">
+      <div class="row mb-2">
         <div class="col">${index + 1}</div>
         <div class="col">
-          <h5 class="m-0 p-0"> ${element.title}</h5>
-          <p>${element.artist.name}</p>
+          <h5>${track.title}</h5>
+          <p>${track.artist.name}</p>
         </div>
-        <div class="col">${element.rank}</div>
-        <div class="col">${element.duration}</div>
-        </div>`;
+        <div class="col">${track.rank}</div>
+        <div class="col">${track.duration}</div>
+      </div>
+    `;
   });
+};
+//FUNZIONE DEL COLORE
+const draw = function (img) {
+  const canvas = document.createElement("canvas");
+  const c = canvas.getContext("2d");
+
+  c.width = canvas.width = img.clientWidth;
+  c.height = canvas.height = img.clientHeight;
+
+  c.drawImage(img, 0, 0, img.clientWidth, img.clientHeight);
+  return c;
+};
+
+const getColors = function (c) {
+  const colors = {};
+  const pixels = c.getImageData(0, 0, c.width, c.height);
+
+  for (let i = 0; i < pixels.data.length; i += 4) {
+    const r = pixels.data[i];
+    const g = pixels.data[i + 1];
+    const b = pixels.data[i + 2];
+    const a = pixels.data[i + 3];
+
+    if (a < 128) continue;
+
+    const col = rgbToHex(r, g, b);
+    colors[col] = (colors[col] || 0) + 1;
+  }
+
+  return colors;
+};
+
+const findMostRecurrentColor = function (colorMap) {
+  let max = 0;
+  let dominant = null;
+
+  for (const color in colorMap) {
+    if (colorMap[color] > max) {
+      max = colorMap[color];
+      dominant = color;
+    }
+  }
+
+  return dominant;
+};
+
+const rgbToHex = function (r, g, b) {
+  return ((r << 16) | (g << 8) | b).toString(16);
+};
+
+const pad = function (hex) {
+  return ("000000" + hex).slice(-6);
+};
+
+const applyAlbumColor = function (img) {
+  const context = draw(img);
+  const colors = getColors(context);
+  const mostRecurrent = findMostRecurrentColor(colors);
+  const hexColor = "#" + pad(mostRecurrent);
+
+  document.getElementById("hero").style.backgroundColor = hexColor;
 };
