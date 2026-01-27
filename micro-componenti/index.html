@@ -16,9 +16,9 @@
   </head>
   <body>
     <main class="container-fluid p-0">
-      <div class="row min-vh-100">
+      <div class="row">
         <!-- SIDEBAR SINISTRA -->
-        <aside class="col-md-3 d-none d-md-flex p-0">
+        <aside class="col-md-3 d-none d-md-block p-0">
           <nav class="sidebar flex-grow-1 fs-2">
             <div class="dropdown d-none d-md-block px-3 pt-3">
               <button class="btn btn-dark p-0" data-bs-toggle="dropdown">
@@ -34,28 +34,28 @@
             <div class="sidebar-top mb-5">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active fs-2" href="#"> <i class="bi bi-house-door me-2"></i> Home </a>
+                  <a class="nav-link active fs-4" href="#"> <i class="bi bi-house-door me-2"></i> Home </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fs-2" href="#"> <i class="bi bi-search me-2"></i> Cerca </a>
+                  <a class="nav-link fs-4" href="#"> <i class="bi bi-search me-2"></i> Cerca </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fs-2" href="#"> <i class="bi bi-collection me-2"></i> Libreria </a>
+                  <a class="nav-link fs-4" href="#"> <i class="bi bi-collection me-2"></i> Libreria </a>
                 </li>
               </ul>
             </div>
 
             <!-- AZIONI -->
             <div class="mb-4">
-              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-2 p-3"
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-4 p-3"
                 ><img src="https://www.aisongmaker.io/_next/static/media/icon.71189d61.png" alt="" class="icon-img me-2" />
                 Crea playlist
               </a>
-              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-2 p-3"
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-4 p-3"
                 ><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840c489c9523ae48b2c3d96177" alt="" class="icon-img me-2" />
                 Brani che ti piacciono
               </a>
-              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-2 p-3"
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-4 p-3"
                 ><img src="https://tse4.mm.bing.net/th/id/OIP.JyK9dWOfKvowsZeLB5u9OAHaHa?pid=Api&P=0&h=180" alt="" class="icon-img me-2" />
                 I tuoi episodi
               </a>
@@ -147,9 +147,9 @@
         </aside>
 
         <!-- MAIN (IL TUO, INVARIATO) -->
-        <section class="col-md-7 p-0" id="colonna-principale">
+        <section class="overflow-auto col-md-7 p-0" style="height: 40vh" id="colonna-principale">
           <!-- 🔴 QUI RESTA TUTTO IL TUO CODICE ESISTENTE -->
-          <nav class="navbar navbar-expand-lg navbar-dark d-flex flex-row justify-content-between">
+          <nav class="navbar mx-2 navbar-expand-lg navbar-dark d-flex flex-row justify-content-between">
             <!-- Bottoni di sinistra -->
             <div class="justify-content-start">
               <button type="button" class="btn btn-outline-light rounded-circle" id="btn-pages">&lt;</button>
@@ -172,50 +172,52 @@
           </nav>
 
           <!-- Album principale novita' -->
-          <div class="container mt-3 py-3 rounded d-flex flex-row" id="album-novita">
-            <!-- immagine album -->
-            <img src="../assets/imgs//main/image-1.jpg" alt="..." height="200px" width="200px" />
-            <!-- info principali -->
-            <div class="ms-3 text-white">
-              <p class="fw-bold">Album</p>
-              <h1 id="text-primary">VIOLA (feat. Salmo)</h1>
-              <p>Fedez, Salmo</p>
-              <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
-              <button type="button" class="btn btn-success text-black fw-bold me-2" id="btn-play-save">Play</button>
-              <button type="button" class="btn btn-light fw-bold me-2" id="btn-play-save">Salva</button>
-              <button type="button" class="btn me-2" id="tree-points"><i class="bi bi-three-dots"></i></button>
+          <div class="container-fluid">
+            <div class="container d-none d-md-block mt-3 py-3 rounded" id="album-novita">
+              <!-- immagine album -->
+              <img src="../assets/imgs//main/image-1.jpg" alt="..." height="200px" width="200px" />
+              <!-- info principali -->
+              <div class="ms-3 text-white">
+                <p class="fw-bold">Album</p>
+                <h1 id="text-primary">VIOLA (feat. Salmo)</h1>
+                <p>Fedez, Salmo</p>
+                <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+                <button type="button" class="btn btn-success text-black fw-bold me-2" id="btn-play-save">Play</button>
+                <button type="button" class="btn btn-light fw-bold me-2" id="btn-play-save">Salva</button>
+                <button type="button" class="btn me-2" id="tree-points"><i class="bi bi-three-dots"></i></button>
+              </div>
+              <button type="button" class="btn align-self-start ms-auto" id="nascondi-annunci">NASCONDI ANNUNCI</button>
             </div>
-            <button type="button" class="btn align-self-start ms-auto" id="nascondi-annunci">NASCONDI ANNUNCI</button>
           </div>
 
           <!-- 6 Album piu ascoltati -->
-          <div class="container mt-4 p-0">
+          <div class="container-fluid mt-4">
             <h2 class="text-white mb-3" id="buonasera">Buonasera</h2>
 
             <!-- prima riga -->
             <div class="row gap-md-3 gap-sm-1 justify-content-evenly">
-              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
+              <div class="col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-2.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">pov: la tua estate e' un film</p>
               </div>
-              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
+              <div class="col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-3.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">Massima Concentrazione</p>
               </div>
-              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
+              <div class="col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-4.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">Peaceful Piano</p>
               </div>
               <!-- seconda riga -->
-              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
+              <div class="col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-5.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">lofi beats</p>
               </div>
-              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
+              <div class="col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-6.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">Jazz Vibes</p>
               </div>
-              <div class="col-6 col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
+              <div class="col-md-3 p-0 d-flex align-items-center rounded" id="box-playlist">
                 <img src="../assets/imgs/main/image-7.jpg" alt="..." height="100px" width="100px" id="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">Caffe' del Buongiorno</p>
               </div>
@@ -492,7 +494,69 @@
 
         <!-- SIDEBAR DESTRA -->
         <aside class="col-md-2 d-none d-md-block bg-black text-white">
-          <p class="p-3">Sidebar destra</p>
+          <div class="main-content">
+            <h1>Contenuto principale</h1>
+            <p>Qui c'è il tuo layout. Questo prende tutto lo spazio disponibile.</p>
+          </div>
+
+          <aside class="right-sidebar bg-black p-3">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="m-0">Attività amici</p>
+              <div>
+                <button class="btn p-1 text-light">
+                  <i class="fa-regular fa-id-badge"></i>
+                </button>
+                <button class="btn p-1 text-light">
+                  <i class="fa-solid fa-x"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- amico1 -->
+            <div class="d-flex gap-2 mb-3">
+              <img src="https://placedog.net/400" class="rounded-5" />
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <span>Charlie Hookham</span>
+                  <span class="text-secondary small">4 ore</span>
+                </div>
+                <div class="text-secondary small">
+                  In Camera · Yumi Zouma <br />
+                  <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                </div>
+              </div>
+            </div>
+
+            <!-- amico2 -->
+            <div class="d-flex gap-2 mb-3">
+              <img src="https://placedog.net/500" class="rounded-5" />
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <span>lightdark02</span>
+                  <span class="text-secondary small">8 ore</span>
+                </div>
+                <div class="text-secondary small">
+                  Almed to Kill · Jade LeMac <br />
+                  <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                </div>
+              </div>
+            </div>
+
+            <!-- amico3 -->
+            <div class="d-flex gap-2">
+              <img src="https://placedog.net/600" class="rounded-5" />
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <span>Valeria Traverso</span>
+                  <span class="text-secondary small">3 giorni</span>
+                </div>
+                <div class="text-secondary small">
+                  Now Kings · Sleeping Wolf <br />
+                  <i class="fa-solid fa-music"></i> Twint Badass mood
+                </div>
+              </div>
+            </div>
+          </aside>
         </aside>
       </div>
     </main>
