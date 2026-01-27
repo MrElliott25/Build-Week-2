@@ -29,3 +29,26 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   object-fit: cover;
 }
+.search-container {
+  position: relative;
+  max-width: 350px;
+  margin-bottom: 30px; /* Spazio tra barra e titolo */
+}
+
+.search-container i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 1.1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 45px;
+  border-radius: 500px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+}
