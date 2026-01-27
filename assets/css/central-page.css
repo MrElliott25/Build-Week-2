@@ -65,3 +65,102 @@ body {
 #foto-card {
   border-radius: 7px;
 }
+
+body {
+  background-color: #121212;
+  color: white;
+  margin: 0;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.right-sidebar img {
+  width: 60px;
+}
+
+/*  sidebar a destra */
+@media (min-width: 700px) {
+  .layout {
+    display: flex;
+  }
+
+  .main-content {
+    flex: 1;
+  }
+
+  .right-sidebar {
+    width: 320px;
+    display: block;
+  }
+}
+
+/* = sidebar nascosta */
+@media (min-width: 430px) and (max-width: 699px) {
+  .right-sidebar {
+    display: none;
+  }
+}
+
+/* SIDEBAR SINISTRA */
+.sidebar {
+  background-color: #000;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* LINK */
+.sidebar a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+ul li {
+  list-style: none;
+}
+
+.sidebar a:hover,
+.sidebar .nav-link.active {
+  color: #fff;
+}
+
+/* AZIONI */
+.sidebar-actions .sidebar-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* SCROLL SOLO PLAYLIST */
+.sidebar-scroll {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* scrollbar */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 3px;
+}
+
+/* MAIN */
+#colonna-principale {
+  background-color: #202020;
+  min-height: 100vh;
+}
