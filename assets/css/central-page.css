@@ -164,3 +164,34 @@ ul li {
   background-color: #202020;
   min-height: 100vh;
 }
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #222;
+  z-index: 1000;
+}
+
+.mobile-bottom-nav a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-bottom-nav a i {
+  font-size: 1.3rem;
+}
+
+.mobile-bottom-nav a.active,
+.mobile-bottom-nav a:hover {
+  color: #fff;
+}
