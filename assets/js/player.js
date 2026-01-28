@@ -15,10 +15,8 @@ function getTrackInfo(albumID, trackID) {
     .then((tracks) => {
       tracks.data.forEach((track) => {
         if (track.id === trackID) {
-          console.log(track);
           setTrack(track.preview);
           setTrackName(track.artist.name, track.title);
-          console.log(track.album.cover);
           setTrackImg(track.album.cover_small);
         }
       });
@@ -42,8 +40,8 @@ function setTrack(currentTrackURL) {
     playBtn.addEventListener("click", () => {
       if (currentTrack.paused) {
         currentTrack.play();
-        playBtn.classList.add("bi-pause-fill");
         playBtn.classList.remove("bi-play-fill");
+        playBtn.classList.add("bi-pause-fill");
       } else {
         currentTrack.pause();
         playBtn.classList.remove("bi-pause-fill");
@@ -145,6 +143,11 @@ function setTrackTime(currentTrack) {
 
   window.addEventListener("mouseup", () => {
     isDragging = false;
+  });
+
+  //Aggiungo l'event listener che mi passa alla prossima canzone una volta finita l'attuale
+  currentTrack.addEventListener("ended", () => {
+    // nextTrack();
   });
 }
 

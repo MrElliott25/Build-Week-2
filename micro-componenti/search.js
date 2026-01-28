@@ -47,5 +47,7 @@ searchInput.addEventListener("input", (e) => {
   const query = e.target.value;
   if (query.length >= 3) {
     GetData(query);
+  } else {
+    // Rigenera il cartonato originale TODO
   }
 });
