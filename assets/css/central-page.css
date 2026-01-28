@@ -6,6 +6,7 @@ body {
 
 #colonna-principale {
   background-color: #202020;
+  scrollbar-width: none;
 }
 
 #album-novita {
@@ -16,8 +17,17 @@ body {
   letter-spacing: -1px;
 }
 
-#foto-album-piccole {
+.foto-album-piccole {
   border-radius: 7px 0px 0px 7px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+@media (min-width: 426px) and (max-width: 1439px) {
+  .foto-album-piccole {
+    max-width: 80px;
+    max-height: 80px;
+  }
 }
 
 #btn-pages {
@@ -36,7 +46,7 @@ body {
   font-weight: bold;
 }
 
-#btn-play-save {
+.btn-play-save {
   font-size: small;
   border-radius: 25px;
   padding: 10px 25px;
@@ -54,15 +64,22 @@ body {
   border-radius: 30px;
 }
 
-#box-playlist {
+.box-playlist {
   background-color: #2c2c2c;
 }
 
-#card {
-  background-color: #171717;
+@media (min-width: 320px) and (max-width: 575px) {
+  .box-playlist {
+    max-width: 85%;
+  }
 }
 
-#foto-card {
+.card-album {
+  background-color: #171717;
+  min-width: 12rem;
+}
+
+.foto-card {
   border-radius: 7px;
 }
 
@@ -84,6 +101,12 @@ body {
   width: 60px;
 }
 
+@media (min-width: 1300px) {
+  .container-cards {
+    overflow-x: auto;
+  }
+}
+
 /*  sidebar a destra */
 @media (min-width: 700px) {
   .layout {
@@ -97,6 +120,18 @@ body {
   .right-sidebar {
     width: 320px;
     display: block;
+  }
+}
+
+@media (max-width: 1919px) {
+  #sidebar-destra {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1919px) {
+  #colonna-principale {
+    width: calc(100% - 320px - 240px);
   }
 }
 
