@@ -82,10 +82,18 @@ body {
   border-radius: 7px;
 }
 
+.scrollbar-album {
+  scrollbar-width: none;
+}
+
 body {
   background-color: #121212;
   color: white;
   margin: 0;
+}
+
+.spaziatura {
+  height: 100px;
 }
 
 .layout {

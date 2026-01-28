@@ -17,15 +17,8 @@
   <body class="bg-dark text-white">
     <!-- sezione immagine e titolo -->
 
-    <section class="position-relative container-fluid p-0" style="height: 50vh">
-      <div class="position-relative h-100 w-100" style="background: url(../assets/imgs/search/image-50.jpg) no-repeat center center; background-size: cover">
-        <!-- testo -->
-        <div class="position-absolute bottom-0 start-0 text-start text-white p-3 p-md-5">
-          <p><i class="fa-regular fa-circle-check"></i> Artista Verificato</p>
-          <h2 class="h3 h-md1 fs-1">Nome dell'artista</h2>
-          <p>746.666 ascoltatori mensili</p>
-        </div>
-      </div>
+    <section id="sezione-titolo" class="position-relative container-fluid p-0">
+      <!-- js del titolo -->
     </section>
     <!-- sezione bottoni -->
     <main class="bg-gradient">
@@ -39,30 +32,10 @@
 
       <!-- seconda sezione  -->
       <section>
-        <div class="container">
+        <div id="Song" class="container">
           <div class="row">
             <!-- COLONNA SINISTRA (le canzoni) -->
-            <div class="col-12 col-md-8 col-lg-8">
-              <!-- CANZONE 1 -->
-              <div class="row align-items-center py-3">
-                <div class="col-5 d-flex align-items-center">
-                  <img src="https://placedog.net/600" style="width: 60px" class="me-3" />
-                  <p class="m-0">Canzone</p>
-                </div>
-                <div class="col-3 text-center">9217120940122</div>
-                <div class="col-3 text-end">3:45</div>
-              </div>
-
-              <!-- CANZONE 2 -->
-              <div class="row align-items-center py-3">
-                <div class="col-5 d-flex align-items-center">
-                  <img src="https://placedog.net/600" style="width: 60px" class="me-3" />
-                  <p class="m-0">Canzone</p>
-                </div>
-                <div class="col-3 text-center">28442819289</div>
-                <div class="col-3 text-end">4:12</div>
-              </div>
-            </div>
+            <!-- CODICE JS -->
 
             <!-- COLONNA DESTRA (sidebar) -->
             <div class="col-md-4 col-lg-4 text-white p-3 d-none d-md-block">
@@ -71,7 +44,6 @@
                 <!-- sono solo un segnaposto mi lanciate in js DIAHANE! -->
                 <li>
                   <img src="../assets/imgs/main/image-1.jpg" style="width: 60px" class="rounded-5 m-3" alt="foto artista" />Hai messo mi piace a tot brani
-                  <p class="text-secondary ps-5">artista</p>
                 </li>
               </ul>
             </div>
@@ -138,5 +110,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="../assets/js/artist.js"></script>
   </body>
 </html>
