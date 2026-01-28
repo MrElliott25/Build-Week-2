@@ -6,7 +6,6 @@ body {
 
 #colonna-principale {
   background-color: #202020;
-  scrollbar-width: none;
 }
 
 #album-novita {
@@ -83,10 +82,18 @@ body {
   border-radius: 7px;
 }
 
+.scrollbar-album {
+  scrollbar-width: none;
+}
+
 body {
   background-color: #121212;
   color: white;
   margin: 0;
+}
+
+.spaziatura {
+  height: 100px;
 }
 
 .layout {
@@ -186,10 +193,10 @@ ul li {
 }
 
 /* scrollbar */
-.sidebar-scroll::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 6px;
 }
-.sidebar-scroll::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: #333;
   border-radius: 3px;
 }
