@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progetto U2-W3</title>
+    <link rel="stylesheet" href="../assets/css/player.css" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/central-page.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
@@ -371,6 +373,60 @@
         </aside>
       </div>
     </main>
+    <div class="player-wrapper player fixed-bottom container-fluid">
+      <div class="d-none d-md-flex align-items-center justify-content-between h-100">
+        <div class="d-flex align-items-center" style="width: 30%">
+          <img src="" class="rounded me-3 player-img" alt="Cover" />
+          <div class="overflow-hidden">
+            <div class="fw-bold text-truncate songname" style="font-size: 0.9rem">Nome brano in JS</div>
+            <div class="small text-secondary artist">Nome artista in JS</div>
+          </div>
+          <i class="bi bi-heart ms-4 icon-btn"></i>
+        </div>
+
+        <div class="d-flex flex-column align-items-center flex-grow-1 px-4">
+          <div class="d-flex align-items-center mb-1">
+            <i class="bi bi-shuffle mx-3 icon-btn small"></i>
+            <i class="bi bi-skip-start-fill mx-2 h4 mb-0 icon-btn"></i>
+            <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center mx-2" style="width: 35px; height: 35px">
+              <i class="bi bi-play-fill text-dark play"></i>
+            </button>
+            <i class="bi bi-skip-end-fill mx-2 h4 mb-0 icon-btn"></i>
+            <i class="bi bi-repeat mx-3 icon-btn small"></i>
+          </div>
+          <div class="d-flex align-items-center w-100">
+            <span class="small text-secondary me-2 tempo">0:00</span>
+            <div class="progress-bar-custom flex-grow-1"><div class="progress-fill"></div></div>
+            <span class="small text-secondary ms-2 tempo-max">00:00</span>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-end" style="width: 30%">
+          <i class="bi bi-mic me-3 icon-btn small"></i>
+          <i class="bi bi-view-list me-3 icon-btn small"></i>
+          <i class="bi bi-speaker me-3 icon-btn small"></i>
+          <i class="bi bi-volume-up me-2 icon-btn"></i>
+          <div class="progress-bar-custom" id="volume-bar" style="width: 100px">
+            <div class="progress-fill" id="volume-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex d-md-none align-items-center justify-content-between">
+        <div class="d-flex align-items-center flex-grow-1 overflow-hidden">
+          <img src="" class="rounded me-2 player-img pe-2" alt="Cover" />
+          <div class="track-info-mobile">
+            <span class="fw-bold small songname">Brano in JS</span>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-laptop icon-btn"></i>
+          <i class="bi bi-heart icon-btn"></i>
+          <i class="bi bi-play-fill h3 mb-0 text-white play"></i>
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
