@@ -1,4 +1,5 @@
 //collegare a home page
+//aggiungere le data-query
 const MainUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?";
 
 const cards = document.querySelectorAll("");
