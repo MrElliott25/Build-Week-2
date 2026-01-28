@@ -1,12 +1,12 @@
 const searchAPI = "https://striveschool-api.herokuapp.com/api/deezer/search?q=fellini";
 const albumAPI = "https://striveschool-api.herokuapp.com/api/deezer/album/";
-const artistAPI = "https://striveschool-api.herokuapp.com/api/deezer/artist/139795852";
 let albumID = 820121831;
 let trackID = 3552598331;
 const playlist = [];
 let currentIndex = 3;
 const currentTrack = new Audio();
 let firstCall = true;
+let artistID = "";
 
 //Fetch riutilizzata per settare il brano
 function getTracksInfo(albumID, trackID) {
@@ -26,6 +26,7 @@ function getTracksInfo(albumID, trackID) {
         if (track.id === trackID) {
           setTrack(track.preview);
           setTrackName(track.artist.name, track.title);
+          artistID = track.artist.id;
           setTrackImg(track.album.cover_small);
         }
         if (firstCall === false) currentTrack.play();
@@ -235,3 +236,9 @@ currentTrack.addEventListener("loadedmetadata", () => {
 });
 
 //#endregion ALL EVENT LISTENERS
+
+//Reindirizzamento quando si clicka il nome dell'artista
+const artistSpan = document.querySelector(".artist");
+artistSpan.addEventListener("click", () => {
+  window.location.assign(`ArtistaPage.html?artistID=${artistID}`);
+});
