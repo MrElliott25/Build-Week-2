@@ -2,6 +2,10 @@ const baseUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 const searchInput = document.getElementById("mainSearch");
 
 const cardElements = document.querySelectorAll(".card-item");
+const originalCards = [];
+cardElements.forEach((card) => {
+  originalCards.push(card.innerHTML);
+});
 
 const GetData = function (query) {
   const fullUrl = baseUrl + query;
@@ -29,12 +33,12 @@ const GetData = function (query) {
           title.innerText = result.title;
           img.src = result.album.cover_medium;
           img.alt = result.title;
-
+          if (card.classList.contains("d-none")) card.classList.remove("d-none");
           if (link) {
             link.href = `../../micro-componenti/album.html?AlbumID=${result.album.id}`;
           }
         } else {
-          card.style.display = "none";
+          card.classList.add("d-none");
         }
       });
     })
@@ -43,11 +47,16 @@ const GetData = function (query) {
     });
 };
 
+const restoreOriginalData = function () {
+  cardElements.forEach((card, index) => {
+    card.innerHTML = originalCards[index];
+  });
+};
 searchInput.addEventListener("input", (e) => {
   const query = e.target.value;
   if (query.length >= 3) {
     GetData(query);
   } else {
-    // Rigenera il cartonato originale TODO
+    restoreOriginalData();
   }
 });
