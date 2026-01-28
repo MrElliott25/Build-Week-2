@@ -16,7 +16,7 @@ body {
   letter-spacing: -1px;
 }
 
-#foto-album-piccole {
+.foto-album-piccole {
   border-radius: 7px 0px 0px 7px;
 }
 
@@ -36,7 +36,7 @@ body {
   font-weight: bold;
 }
 
-#btn-play-save {
+.btn-play-save {
   font-size: small;
   border-radius: 25px;
   padding: 10px 25px;
@@ -54,7 +54,7 @@ body {
   border-radius: 30px;
 }
 
-#box-playlist {
+.box-playlist {
   background-color: #2c2c2c;
 }
 
