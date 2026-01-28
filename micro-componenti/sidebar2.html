@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Right Sidebar</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background-color: #121212;
+        color: white;
+        margin: 0;
+      }
+
+      .layout {
+        min-height: 100vh;
+      }
+
+      .main-content {
+        padding: 2rem;
+      }
+
+      .right-sidebar img {
+        width: 60px;
+      }
+
+      /*  sidebar a destra */
+      @media (min-width: 1200px) {
+        .layout {
+          display: flex;
+        }
+
+        .main-content {
+          flex: 1;
+        }
+
+        .right-sidebar {
+          width: 320px;
+          display: block;
+        }
+      }
+
+      /* = sidebar nascosta */
+      @media (min-width: 430px) and (max-width: 1199px) {
+        .right-sidebar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="layout">
+      <div class="main-content">
+        <h1>Contenuto principale</h1>
+        <p>Qui c'è il tuo layout. Questo prende tutto lo spazio disponibile.</p>
+      </div>
+
+      <aside class="right-sidebar bg-black p-3">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <p class="m-0">Attività amici</p>
+          <div>
+            <button class="btn p-1 text-light">
+              <i class="fa-regular fa-id-badge"></i>
+            </button>
+            <button class="btn p-1 text-light">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- amico1 -->
+        <div class="d-flex gap-2 mb-3">
+          <img src="https://placedog.net/400" class="rounded-5" />
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between">
+              <span>Charlie Hookham</span>
+              <span class="text-secondary small">4 ore</span>
+            </div>
+            <div class="text-secondary small">
+              In Camera · Yumi Zouma <br />
+              <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+            </div>
+          </div>
+        </div>
+
+        <!-- amico2 -->
+        <div class="d-flex gap-2 mb-3">
+          <img src="https://placedog.net/500" class="rounded-5" />
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between">
+              <span>lightdark02</span>
+              <span class="text-secondary small">8 ore</span>
+            </div>
+            <div class="text-secondary small">
+              Almed to Kill · Jade LeMac <br />
+              <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+            </div>
+          </div>
+        </div>
+
+        <!-- amico3 -->
+        <div class="d-flex gap-2">
+          <img src="https://placedog.net/600" class="rounded-5" />
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-between">
+              <span>Valeria Traverso</span>
+              <span class="text-secondary small">3 giorni</span>
+            </div>
+            <div class="text-secondary small">
+              Now Kings · Sleeping Wolf <br />
+              <i class="fa-solid fa-music"></i> Twint Badass mood
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
