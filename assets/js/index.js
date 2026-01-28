@@ -1,5 +1,5 @@
 //collegare a home page
-const MainUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"; //manca ?q= ....
+const MainUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"; //manca ?q=${.....}
 const GetData = function (url) {
   fetch(url)
     .then((res) => {
