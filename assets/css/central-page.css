@@ -6,6 +6,7 @@ body {
 
 #colonna-principale {
   background-color: #202020;
+  scrollbar-width: none;
 }
 
 #album-novita {

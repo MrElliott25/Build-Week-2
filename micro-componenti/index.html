@@ -27,8 +27,8 @@
       <span>Libreria</span>
     </a>
   </nav>
-  <body>
-    <main class="p-0">
+  <body class="p-0">
+    <main>
       <div class="row">
         <!-- SIDEBAR SINISTRA -->
         <aside class="col-lg-3 d-none d-lg-block p-0">
@@ -189,7 +189,7 @@
             <div class="container d-none d-md-block mt-3 py-3 rounded" id="album-novita">
               <!-- immagine album -->
               <div class="d-flex align-items-center gap-4">
-                <div>
+                <div class="d-flex align-items-center">
                   <img src="../assets/imgs//main/image-1.jpg" alt="..." height="200px" width="200px" />
                   <!-- info principali -->
                   <div class="ms-3 text-white">
@@ -367,127 +367,128 @@
         </section>
 
         <!-- SIDEBAR DESTRA -->
-        <aside class="col-lg-2 d-none d-xxl-block bg-black text-white" id="sidebar-destra">
+        <aside class="col-lg-2 bg-black text-white" id="sidebar-destra">
           <div class="main-content p-1">
             <h1>Contenuto principale</h1>
             <p>Qui c'è il tuo layout. Questo prende tutto lo spazio disponibile.</p>
+            <aside class="right-sidebar bg-black p-0">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <p class="m-0">Attività amici</p>
+                <div>
+                  <button class="btn p-1 text-light">
+                    <i class="fa-regular fa-id-badge"></i>
+                  </button>
+                  <button class="btn p-1 text-light">
+                    <i class="fa-solid fa-x"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- amico1 -->
+              <div class="d-flex gap-2 mb-3">
+                <img src="https://placedog.net/400" class="rounded-5" />
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <span>Charlie Hookham</span>
+                    <span class="text-secondary small">4 ore</span>
+                  </div>
+                  <div class="text-secondary small">
+                    In Camera · Yumi Zouma <br />
+                    <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                  </div>
+                </div>
+              </div>
+
+              <!-- amico2 -->
+              <div class="d-flex gap-2 mb-3">
+                <img src="https://placedog.net/500" class="rounded-5" />
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <span>lightdark02</span>
+                    <span class="text-secondary small">8 ore</span>
+                  </div>
+                  <div class="text-secondary small">
+                    Almed to Kill · Jade LeMac <br />
+                    <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                  </div>
+                </div>
+              </div>
+
+              <!-- amico3 -->
+              <div class="d-flex gap-2">
+                <img src="https://placedog.net/600" class="rounded-5" />
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <span>Valeria Traverso</span>
+                    <span class="text-secondary small">3 giorni</span>
+                  </div>
+                  <div class="text-secondary small">
+                    Now Kings · Sleeping Wolf <br />
+                    <i class="fa-solid fa-music"></i> Twint Badass mood
+                  </div>
+                </div>
+              </div>
+            </aside>
           </div>
-
-          <aside class="right-sidebar bg-black p-3">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <p class="m-0">Attività amici</p>
-              <div>
-                <button class="btn p-1 text-light">
-                  <i class="fa-regular fa-id-badge"></i>
-                </button>
-                <button class="btn p-1 text-light">
-                  <i class="fa-solid fa-x"></i>
-                </button>
-              </div>
-            </div>
-
-            <!-- amico1 -->
-            <div class="d-flex gap-2 mb-3">
-              <img src="https://placedog.net/400" class="rounded-5" />
-              <div class="flex-grow-1">
-                <div class="d-flex justify-content-between">
-                  <span>Charlie Hookham</span>
-                  <span class="text-secondary small">4 ore</span>
-                </div>
-                <div class="text-secondary small">
-                  In Camera · Yumi Zouma <br />
-                  <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
-                </div>
-              </div>
-            </div>
-
-            <!-- amico2 -->
-            <div class="d-flex gap-2 mb-3">
-              <img src="https://placedog.net/500" class="rounded-5" />
-              <div class="flex-grow-1">
-                <div class="d-flex justify-content-between">
-                  <span>lightdark02</span>
-                  <span class="text-secondary small">8 ore</span>
-                </div>
-                <div class="text-secondary small">
-                  Almed to Kill · Jade LeMac <br />
-                  <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
-                </div>
-              </div>
-            </div>
-
-            <!-- amico3 -->
-            <div class="d-flex gap-2">
-              <img src="https://placedog.net/600" class="rounded-5" />
-              <div class="flex-grow-1">
-                <div class="d-flex justify-content-between">
-                  <span>Valeria Traverso</span>
-                  <span class="text-secondary small">3 giorni</span>
-                </div>
-                <div class="text-secondary small">
-                  Now Kings · Sleeping Wolf <br />
-                  <i class="fa-solid fa-music"></i> Twint Badass mood
-                </div>
-              </div>
-            </div>
-          </aside>
         </aside>
       </div>
+
+      <!-- Player -->
+      <div class="player-wrapper player fixed-bottom container-fluid">
+        <div class="d-none d-md-flex align-items-center justify-content-between h-100">
+          <div class="d-flex align-items-center" style="width: 30%">
+            <img src="" class="rounded me-3 player-img" alt="Cover" />
+            <div class="overflow-hidden">
+              <div class="fw-bold text-truncate songname" style="font-size: 0.9rem">Nome brano in JS</div>
+              <div class="small text-secondary artist">Nome artista in JS</div>
+            </div>
+            <i class="bi bi-heart ms-4 icon-btn"></i>
+          </div>
+
+          <div class="d-flex flex-column align-items-center flex-grow-1 px-4">
+            <div class="d-flex align-items-center mb-1">
+              <i class="bi bi-shuffle mx-3 icon-btn small"></i>
+              <i class="bi bi-skip-start-fill mx-2 h4 mb-0 icon-btn"></i>
+              <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center mx-2" style="width: 35px; height: 35px">
+                <i class="bi bi-play-fill text-dark play"></i>
+              </button>
+              <i class="bi bi-skip-end-fill mx-2 h4 mb-0 icon-btn"></i>
+              <i class="bi bi-repeat mx-3 icon-btn small"></i>
+            </div>
+            <div class="d-flex align-items-center w-100">
+              <span class="small text-secondary me-2 tempo">0:00</span>
+              <div class="progress-bar-custom flex-grow-1"><div class="progress-fill"></div></div>
+              <span class="small text-secondary ms-2 tempo-max">00:00</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-end" style="width: 30%">
+            <i class="bi bi-mic me-3 icon-btn small"></i>
+            <i class="bi bi-view-list me-3 icon-btn small"></i>
+            <i class="bi bi-speaker me-3 icon-btn small"></i>
+            <i class="bi bi-volume-up me-2 icon-btn"></i>
+            <div class="progress-bar-custom" id="volume-bar" style="width: 100px">
+              <div class="progress-fill" id="volume-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex d-md-none align-items-center justify-content-between">
+          <div class="d-flex align-items-center flex-grow-1 overflow-hidden">
+            <img src="" class="rounded me-2 player-img pe-2" alt="Cover" />
+            <div class="track-info-mobile">
+              <span class="fw-bold small songname">Brano in JS</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-laptop icon-btn"></i>
+            <i class="bi bi-heart icon-btn"></i>
+            <i class="bi bi-play-fill h3 mb-0 text-white play"></i>
+          </div>
+        </div>
+      </div>
     </main>
-    <div class="player-wrapper player fixed-bottom container-fluid">
-      <div class="d-none d-md-flex align-items-center justify-content-between h-100">
-        <div class="d-flex align-items-center" style="width: 30%">
-          <img src="" class="rounded me-3 player-img" alt="Cover" />
-          <div class="overflow-hidden">
-            <div class="fw-bold text-truncate songname" style="font-size: 0.9rem">Nome brano in JS</div>
-            <div class="small text-secondary artist">Nome artista in JS</div>
-          </div>
-          <i class="bi bi-heart ms-4 icon-btn"></i>
-        </div>
-
-        <div class="d-flex flex-column align-items-center flex-grow-1 px-4">
-          <div class="d-flex align-items-center mb-1">
-            <i class="bi bi-shuffle mx-3 icon-btn small"></i>
-            <i class="bi bi-skip-start-fill mx-2 h4 mb-0 icon-btn"></i>
-            <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center mx-2" style="width: 35px; height: 35px">
-              <i class="bi bi-play-fill text-dark play"></i>
-            </button>
-            <i class="bi bi-skip-end-fill mx-2 h4 mb-0 icon-btn"></i>
-            <i class="bi bi-repeat mx-3 icon-btn small"></i>
-          </div>
-          <div class="d-flex align-items-center w-100">
-            <span class="small text-secondary me-2 tempo">0:00</span>
-            <div class="progress-bar-custom flex-grow-1"><div class="progress-fill"></div></div>
-            <span class="small text-secondary ms-2 tempo-max">00:00</span>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-center justify-content-end" style="width: 30%">
-          <i class="bi bi-mic me-3 icon-btn small"></i>
-          <i class="bi bi-view-list me-3 icon-btn small"></i>
-          <i class="bi bi-speaker me-3 icon-btn small"></i>
-          <i class="bi bi-volume-up me-2 icon-btn"></i>
-          <div class="progress-bar-custom" id="volume-bar" style="width: 100px">
-            <div class="progress-fill" id="volume-bar-fill"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex d-md-none align-items-center justify-content-between">
-        <div class="d-flex align-items-center flex-grow-1 overflow-hidden">
-          <img src="" class="rounded me-2 player-img pe-2" alt="Cover" />
-          <div class="track-info-mobile">
-            <span class="fw-bold small songname">Brano in JS</span>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-center gap-3">
-          <i class="bi bi-laptop icon-btn"></i>
-          <i class="bi bi-heart icon-btn"></i>
-          <i class="bi bi-play-fill h3 mb-0 text-white play"></i>
-        </div>
-      </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
