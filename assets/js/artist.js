@@ -39,8 +39,6 @@ const stampatitolo = function (artista) {
       </div>
   `;
 };
-// h-100 w-100"
-//position-absolute w-100 h-100
 
 // STAMPA CANZONI
 const stampacanzoni = function (track) {
@@ -92,22 +90,3 @@ function formatTime(seconds) {
   const sec = Math.floor(seconds % 60);
   return `${min}:${sec < 10 ? "0" + sec : sec}`;
 }
-/*
-const stampacanzoni = function (tracks) {
-  const row = document.getElementById("row-canzoni");
-
-  tracks.forEach((track) => {
-    row.innerHTML += `
-      <div class="row mb-2">
-        <div class="col">${index + 1}</div>
-        <div class="col">
-          <h5>${track.title}</h5>
-          <p>${track.artist.name}</p>
-        </div>
-        <div class="col">${track.rank}</div>
-        <div class="col">${track.duration}</div>
-      </div>
-    `;
-  });
-};
-*/

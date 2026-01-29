@@ -47,22 +47,33 @@ const stampatitolo = function (album) {
 // STAMPA CANZONI
 const stampacanzoni = function (tracks) {
   const row = document.getElementById("row-canzoni");
+  row.innerHTML = "";
 
   tracks.forEach((track, index) => {
-    const num = track.duration / 60;
+    const minutes = Math.floor(track.duration / 60);
+    const seconds = track.duration % 60;
+
     row.innerHTML += `
-      <div class="row mb-2">
-        <div class="col">${index + 1}</div>
-        <div class="col">
-          <h5>${track.title}</h5>
-          <p>${track.artist.name}</p>
+      <div class="row align-items-center py-2 text-white">
+        <div class="col-auto text-secondary pe-2 d-none d-md-block">
+          ${index + 1}
         </div>
-        <div class="col">${track.rank}</div>
-        <div class="col">${num.toFixed(1)}</div>
+        <div class="col">
+          <div class="fw-semibold">${track.title}</div>
+          <div class="text-secondary small">${track.artist.name}</div>
+        </div>
+        <div class="col-2 text-secondary d-none d-md-block text-end">
+          ${track.rank}
+        </div>
+        <div class="col-2 text-end text-secondary small">
+          ${minutes}:${seconds.toString().padStart(2, "0")}
+        </div>
+
       </div>
     `;
   });
 };
+
 //FUNZIONE DEL COLORE
 const draw = function (img) {
   const canvas = document.createElement("canvas");
