@@ -59,6 +59,7 @@ const stampacanzoni = function (track) {
       const array = [];
       dati.forEach((element) => {
         array.push({
+          id: element.album.id,
           img: element.album.cover_small,
           title: element.title,
           rank: element.rank,
@@ -69,17 +70,15 @@ const stampacanzoni = function (track) {
       array.sort((a, b) => b.rank - a.rank);
       array.forEach((element) => {
         Container.innerHTML += `
-        <div class="row align-items-center py-3">
- <div class="col-12 col-md-8 col-lg-8">
+
               <div class="row align-items-center py-3">
                 <div class="col-5 d-flex align-items-center">
                   <img src="${element.img}" style="width: 60px" class="me-3" />
-                  <p class="m-0">${element.title}</p>
+                  <a href="album.html?AlbumID=${element.id}" class="text-decoration-none  text-white m-0">${element.title}</a>
                 </div>
                 <div class="col-3 text-center">${element.rank}</div>
-                <div class="col-3 text-end">${element.duration}</div>
-              </div>
-               </div>
+                <div class="col-3 text-end">${formatTime(element.duration)}</div>
+
 
 
 `;
@@ -88,6 +87,11 @@ const stampacanzoni = function (track) {
     .catch((err) => console.log("Errore:", err));
 };
 
+function formatTime(seconds) {
+  const min = Math.floor(seconds / 60);
+  const sec = Math.floor(seconds % 60);
+  return `${min}:${sec < 10 ? "0" + sec : sec}`;
+}
 /*
 const stampacanzoni = function (tracks) {
   const row = document.getElementById("row-canzoni");
