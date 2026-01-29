@@ -122,6 +122,6 @@ const applyAlbumColor = function (img) {
   const mostRecurrent = findMostRecurrentColor(colors);
   const hexColor = "#" + pad(mostRecurrent);
   const colore2 = "#131313";
-  const mioGradiente = `linear-gradient(to bottom, ${hexColor} 10% , ${colore2} 45% )`;
-  document.getElementById("Master-A").style.background = mioGradiente;
+  const mioGradiente = `linear-gradient(to bottom, ${hexColor} 10% , ${colore2} 100% )`;
+  document.getElementById("hero").style.background = mioGradiente;
 };

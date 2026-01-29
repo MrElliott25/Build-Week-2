@@ -253,3 +253,7 @@ ul li {
 .mobile-bottom-nav a:hover {
   color: #fff;
 }
+
+.css-height {
+  height: 500px;
+}
