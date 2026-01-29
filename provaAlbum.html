@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Album Page</title>
+    <link rel="stylesheet" href="./provaAlbum.css" />
     <link rel="stylesheet" href="../assets/css/player.css" />
 
     <link
@@ -198,7 +199,7 @@
           </section>
           <!--fine seconda section con le icone-->
           <!--inizio sopratitoli-->
-          <div class="container text-center">
+          <div class="container text-start">
             <div class="row d-flex justufy-content-space-around align-items-start border-bottom border-2">
               <div class="col">#</div>
               <div class="col">Titolo</div>
@@ -213,6 +214,24 @@
               <!--inizio codice js-->
             </div>
           </div>
+          <div class="row align-items-center mb-2 py-2 pointer">
+            <div class="col-1 text-center position-relative number-cell">
+              <span class="pointer-number">1</span>
+              <i class="fa-solid fa-play play-icon"></i>
+            </div>
+
+            <div class="col-5">
+              <h5 class="m-0">
+                You're My Best Friend <br />
+                (Remastered 2011)
+              </h5>
+              <p class="m-0 text-secondary">Queen</p>
+            </div>
+
+            <div class="col-3">378956</div>
+            <div class="col-3">177</div>
+          </div>
+
           <!--c--------------------------------------------------------------c--------------------------------------------------------------------------------------->
         </section>
 
@@ -322,7 +341,7 @@
         <div class="d-flex d-md-none align-items-center justify-content-between">
           <div class="d-flex align-items-center flex-grow-1 overflow-hidden">
             <img src="" class="rounded me-2 player-img pe-2" alt="Cover" />
-            <div class="track-info-mobile">
+            <div class="pointer-info-mobile">
               <span class="fw-bold small songname">Brano in JS</span>
             </div>
           </div>
