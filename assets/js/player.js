@@ -246,4 +246,13 @@ artistSpan.addEventListener("click", () => {
   window.location.assign(`ArtistaPage.html?artistID=${artistID}`);
 });
 
+const allRetrievers = document.querySelectorAll(".retriever");
+allRetrievers.forEach((retriever) => {
+  retriever.addEventListener("click", (e) => {
+    if (e.target.classList.contains("fa-play")) {
+      selectTrackToSet();
+    }
+  });
+});
+
 //#endregion ALL EVENT LISTENERS
