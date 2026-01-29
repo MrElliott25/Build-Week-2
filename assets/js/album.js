@@ -35,7 +35,7 @@ const stampatitolo = function (album) {
     <div class="col p-1 text-start">
       <p>ALBUM</p>
       <h1>${album.title}</h1>
-      <p>${album.artist.name} · ${album.tracks.data.length} brani</p>
+      <p><a class="text-decoration-none" href="./ArtistaPage.html?ArtistID=${album.artist.id}">${album.artist.name}</a> · ${album.tracks.data.length} brani</p>
     </div>
   `;
 
