@@ -64,12 +64,10 @@
             <div class="sidebar-top mb-5">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link fs-4" href="index.html">
-                    <i class="bi bi-house-door me-2"></i> Home
-                  </a>
+                  <a class="nav-link fs-4" href="./index.html"> <i class="bi bi-house-door me-2"></i> Home </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fs-4" href="#"> <i class="bi bi-search me-2"></i> Cerca </a>
+                  <a class="nav-link fs-4" href="./search.html"> <i class="bi bi-search me-2"></i> Cerca </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link fs-4" href="#">
@@ -191,15 +189,18 @@
             </div>
           </nav>
         </aside>
-        <main class="col-lg-7 col-md-12 flex-grow-1 p-0 main-content-scroll">
+        <main class="col-lg-7 col-md-12 flex-grow-1 p-0 main-content-scroll position-relative">
           <section id="sezione-titolo" class="container-fluid p-0">
             <!-- js del titolo -->
           </section>
-            <nav class="navbar mx-3 navbar-expand-lg navbar-dark d-flex flex-row justify-content-between">
-            <!-- Bottoni di sinistra -->
-            <div class="justify-content-start">
-              <button type="button" class="btn btn-outline-light rounded-circle" id="btn-pages">&lt;</button>
-              <button type="button" class="btn btn-outline-light rounded-circle" id="btn-pages">&gt;</button>
+        <nav class="navbar mx-2 navbar-expand-lg navbar-dark 
+     d-flex flex-row justify-content-between 
+     position-absolute top-0 w-100"
+     style="z-index: 10;">
+           <div class="justify-content-start">
+              <button type="button" onclick="location.href='./album.html'"  class="btn btn-outline-light rounded-circle btn-pages">&lt;
+              </button>
+              <button type="button" class="btn btn-outline-light rounded-circle btn-pages">&gt;</button>
             </div>
             <!-- dropdown di destra -->
             <div class="justify-content-end">
