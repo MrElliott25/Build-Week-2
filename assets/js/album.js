@@ -55,25 +55,39 @@ const stampacanzoni = function (tracks) {
     const seconds = track.duration % 60;
 
     row.innerHTML += `
-      <div class="row align-items-center py-2 text-white">
-        <div class="col-auto text-secondary pe-2 d-none d-md-block">
-          ${index + 1}
-        </div>
-        <div class="col">
-          <div class="fw-semibold">${track.title}</div>
-          <div class="text-secondary small">${track.artist.name}</div>
-        </div>
-        <div class="col-2 text-secondary d-none d-md-block text-end">
-          ${track.rank}
-        </div>
-        <div class="col-2 text-end text-secondary small">
-          ${minutes}:${seconds.toString().padStart(2, "0")}
-        </div>
-
+  <div class="row align-items-center py-2 text-white g-0 song-row px-2"> 
+    <div class="col d-flex align-items-center">
+      <div class="text-secondary text-end me-3" style="width: 30px;">
+        ${index + 1}
       </div>
-    `;
+      
+      <div class="d-flex flex-column overflow-hidden">
+        <div class="fw-semibold text-white text-truncate">${track.title}</div> 
+        <div class="text-secondary small text-truncate">${track.artist.name}</div>
+      </div>
+    </div>
+
+    <div class="col-2 text-secondary  pe-3">
+      ${track.rank.toLocaleString()}
+    </div>
+
+    <div class="col-2 text-secondary small">
+      ${minutes}:${seconds.toString().padStart(2, "0")}
+    </div>
+  </div>
+`;
   });
 };
+/*
+<div class="col d-flex gap-4">
+                    <div class="text-start"> ${index + 1}</div>
+                    <div class="me-3">${track.title}</div>
+                    <div class="text-secondary small text-truncate">${track.artist.name}</div>
+                  </div>
+                  <div class="col-2">${track.rank}</div>
+                  <div class="col-2">${minutes}:${seconds.toString().padStart(2, "0")}</div>
+                </div>
+*/
 
 //FUNZIONE DEL COLORE
 const draw = function (img) {
