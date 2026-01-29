@@ -54,8 +54,8 @@ body {
 /* --- MOBILE --- */
 @media (max-width: 767px) {
   .player-wrapper {
-    z-index: 9999;
-    bottom: 60px;
+    z-index: 1001;
+    bottom: 64px !important;
     justify-content: center;
     max-width: 95%;
 
