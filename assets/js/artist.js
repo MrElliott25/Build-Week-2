@@ -1,10 +1,10 @@
 // PRENDO DATI DA URL
-/*
+
 const url = location.search;
 const allTheParameters = new URLSearchParams(url);
 const ArtistID = allTheParameters.get("ArtistID");
-*/
-const MainUrl = `https://striveschool-api.herokuapp.com/api/deezer/artist/412`;
+
+const MainUrl = ` https://striveschool-api.herokuapp.com/api/deezer/artist/${ArtistID}`;
 
 const GetAlbum = function () {
   fetch(MainUrl)

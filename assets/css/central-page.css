@@ -1,7 +1,8 @@
 html,
 body {
-  max-width: 100%;
+  height: 100vh;
   overflow-x: hidden;
+  margin: 0;
 }
 
 li {
@@ -40,7 +41,7 @@ li {
   }
 }
 
-#btn-pages {
+.btn-pages {
   background-color: #131313;
   border: none;
   color: grey;
@@ -199,9 +200,12 @@ ul li {
 
 /* SCROLL SOLO PLAYLIST */
 .sidebar-scroll {
-  flex-grow: 1;
   overflow-y: auto;
   padding-right: 5px;
+  height: 64%;
+}
+.sidebar-scroll li {
+  color: #878787;
 }
 
 /* scrollbar */
