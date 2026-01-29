@@ -24,14 +24,15 @@ const stampatitolo = function (album) {
   const rowA = document.getElementById("row-album");
 
   rowA.innerHTML = `
-    <div class="col">
+    
       <img
         id="album-cover"
         src="${album.cover_medium}"
         crossorigin="anonymous"
         alt="${album.title}"
+        class="image-fluid"
       />
-    </div>
+    
     <div class="col p-1 text-start">
       <p>ALBUM</p>
       <h1>${album.title}</h1>
@@ -122,6 +123,6 @@ const applyAlbumColor = function (img) {
   const mostRecurrent = findMostRecurrentColor(colors);
   const hexColor = "#" + pad(mostRecurrent);
   const colore2 = "#131313";
-  const mioGradiente = `linear-gradient(to bottom, ${hexColor} 10% , ${colore2} 100% )`;
+  const mioGradiente = `linear-gradient(to bottom, ${hexColor} 0% , ${colore2} 35% )`;
   document.getElementById("hero").style.background = mioGradiente;
 };

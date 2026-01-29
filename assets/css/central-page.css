@@ -258,6 +258,8 @@ ul li {
   color: #fff;
 }
 
-.css-height {
-  height: 500px;
+#album-cover {
+  max-width: fit-content;
+  box-shadow: 0px 0px 15px 0px black;
+  padding: 0%;
 }
