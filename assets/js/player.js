@@ -19,10 +19,9 @@ function getTracksInfo(albumID, trackID) {
     })
     .then((tracks) => {
       tracks.data.forEach((track) => {
-        if (localStorage.getItem("playlist") === null) {
-          playlist.push(track);
-          localStorage.setItem("playlist", JSON.stringify(playlist));
-        }
+        if (!playlist.find((localTrack) => localTrack.id === track.id)) playlist.push(track);
+
+        localStorage.setItem("playlist", JSON.stringify(playlist));
         if (track.id === trackID) {
           setTrack(track.preview);
           setTrackName(track.artist.name, track.title);
@@ -51,6 +50,14 @@ if (localStorage.getItem("playlist") === null) {
   currentIndex = 0;
 }
 
+function selectTrackToSet(albumID, trackID) {
+  localStorage.removeItem("playlist");
+  playlist = [];
+  progressBarOngoing.style.width = `0%`;
+  getTracksInfo(albumID, trackID);
+  firstCall = false;
+}
+
 //Funzioni chiamata dall'event listener (sotto nella region) per cambiare canzoni
 function nextTrack() {
   currentIndex++;
@@ -72,8 +79,6 @@ function prevTrack() {
 //Funzione che setta effettivamente la track
 function setTrack(currentTrackURL) {
   currentTrack.src = currentTrackURL;
-  console.log(currentTrack.src);
-
   currentTrack.pause();
   currentTrack.load();
 }
@@ -235,10 +240,10 @@ currentTrack.addEventListener("loadedmetadata", () => {
   trackMaxTime.innerText = formatTime(currentTrack.duration);
 });
 
-//#endregion ALL EVENT LISTENERS
-
 //Reindirizzamento quando si clicka il nome dell'artista
 const artistSpan = document.querySelector(".artist");
 artistSpan.addEventListener("click", () => {
   window.location.assign(`ArtistaPage.html?artistID=${artistID}`);
 });
+
+//#endregion ALL EVENT LISTENERS

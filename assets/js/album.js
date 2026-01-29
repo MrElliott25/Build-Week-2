@@ -57,7 +57,7 @@ const stampacanzoni = function (tracks) {
           <p>${track.artist.name}</p>
         </div>
         <div class="col">${track.rank}</div>
-        <div class="col">${track.duration}</div>
+        <div class="col">${formatTime(track.duration)}</div>
       </div>
     `;
   });
@@ -123,3 +123,9 @@ const applyAlbumColor = function (img) {
 
   document.getElementById("hero").style.backgroundColor = hexColor;
 };
+
+function formatTime(seconds) {
+  const min = Math.floor(seconds / 60);
+  const sec = Math.floor(seconds % 60);
+  return `${min}:${sec < 10 ? "0" + sec : sec}`;
+}
