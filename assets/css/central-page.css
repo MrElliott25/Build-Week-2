@@ -40,7 +40,7 @@ li {
   }
 }
 
-#btn-pages {
+.btn-pages {
   background-color: #131313;
   border: none;
   color: grey;
