@@ -44,13 +44,13 @@
               </ul>
             </div>
             <!-- MENU -->
-            <div class="sidebar-top mb-5">
+            <div class="sidebar-top mb-3">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active fs-4" href="#"> <i class="bi bi-house-door me-2"></i> Home </a>
+                  <a class="nav-link active fs-4" href="index.html"> <i class="bi bi-house-door me-2"></i> Home </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fs-4" href="#"> <i class="bi bi-search me-2"></i> Cerca </a>
+                  <a class="nav-link fs-4" href="search.html"> <i class="bi bi-search me-2"></i> Cerca </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link fs-4" href="#"> <i class="bi bi-collection me-2"></i> Libreria </a>
@@ -59,16 +59,16 @@
             </div>
 
             <!-- AZIONI -->
-            <div class="mb-4">
-              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-4 p-3"
+            <div class="mb-2">
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-5 p-3"
                 ><img src="https://www.aisongmaker.io/_next/static/media/icon.71189d61.png" alt="" class="icon-img me-2" />
                 Crea playlist
               </a>
-              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-4 p-3"
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-5 p-3"
                 ><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840c489c9523ae48b2c3d96177" alt="" class="icon-img me-2" />
                 Brani che ti piacciono
               </a>
-              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-4 p-3"
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-5 p-3"
                 ><img src="https://tse4.mm.bing.net/th/id/OIP.JyK9dWOfKvowsZeLB5u9OAHaHa?pid=Api&P=0&h=180" alt="" class="icon-img me-2" />
                 I tuoi episodi
               </a>
@@ -77,7 +77,7 @@
 
             <!-- PLAYLIST SCROLL -->
             <div class="sidebar-scroll">
-              <ul class="playlist-list text-secondary fs-4 list-style-none ps-3">
+              <ul class="playlist-list text-secondary fs-5 list-style-none ps-3">
                 <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
                 <li class="mb-2">Be The Young</li>
                 <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
@@ -175,10 +175,9 @@
                   <img src="../assets/imgs/main/image-1.jpg" alt="Foto profilo" class="rounded-circle me-2" width="30" height="30" />
                   Ernesto Scorzelli
                 </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul class="dropdown-menu bg-black text-white">
+                  <li><a class="dropdown-item" href="search.html" style="color: white">Search Page</a></li>
+                  <li><a class="dropdown-item" href="album.html" style="color: white">Album Page</a></li>
                 </ul>
               </div>
             </div>
@@ -199,7 +198,9 @@
                     <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
                     <button type="button" class="btn btn-success text-black fw-bold me-2 btn-play-save">Play</button>
                     <button type="button" class="btn btn-light fw-bold me-2 btn-play-save">Salva</button>
-                    <button type="button" class="btn me-2" id="tree-points"><i class="bi bi-three-dots"></i></button>
+                    <button type="button" class="btn me-2" id="tree-points">
+                      <i class="bi bi-three-dots"></i>
+                    </button>
                   </div>
                 </div>
                 <button type="button" class="btn align-self-start ms-auto" id="nascondi-annunci">NASCONDI ANNUNCI</button>
@@ -367,14 +368,15 @@
             </div>
           </div>
 
+          <!-- div per spaziatura -->
+          <div class="spaziatura"></div>
+
           <!-- fine div colonna principale  -->
         </section>
 
         <!-- SIDEBAR DESTRA -->
         <aside class="col-lg-2 bg-black text-white" id="sidebar-destra">
           <div class="main-content p-1">
-            <h1>Contenuto principale</h1>
-            <p>Qui c'è il tuo layout. Questo prende tutto lo spazio disponibile.</p>
             <aside class="right-sidebar bg-black p-0">
               <div class="d-flex justify-content-between align-items-center mb-4">
                 <p class="m-0">Attività amici</p>

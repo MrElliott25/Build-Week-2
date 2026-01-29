@@ -6,6 +6,7 @@ const originalCards = [];
 cardElements.forEach((card) => {
   originalCards.push(card.innerHTML);
 });
+console.log(originalCards);
 
 const GetData = function (query) {
   const fullUrl = baseUrl + query;
@@ -33,7 +34,9 @@ const GetData = function (query) {
           title.innerText = result.title;
           img.src = result.album.cover_medium;
           img.alt = result.title;
-          if (card.classList.contains("d-none")) card.classList.remove("d-none");
+          if (card.classList.contains("d-none")) {
+            card.classList.remove("d-none");
+          }
           if (link) {
             link.href = `../../micro-componenti/album.html?AlbumID=${result.album.id}`;
           }
@@ -50,6 +53,7 @@ const GetData = function (query) {
 const restoreOriginalData = function () {
   cardElements.forEach((card, index) => {
     card.innerHTML = originalCards[index];
+    if (card.classList.contains("d-none")) card.classList.remove("d-none");
   });
 };
 searchInput.addEventListener("input", (e) => {

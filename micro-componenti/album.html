@@ -17,8 +17,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/central-page.css" />
   </head>
-  <body>
-    <main class="container-fluid p-0">
+  <body class="p-0">
+    <main>
       <div class="row">
         <!-- SIDEBAR SINISTRA -->
         <aside class="col-md-3 d-none d-md-block p-0">
@@ -149,7 +149,7 @@
           </nav>
         </aside>
 
-        <section id="Master-A" class="col-md-7 col-12 main-content-scroll p-4 text-white">
+        <section id="Master-A" class="col-md-7 flex-grow-1 col-12 main-content-scroll p-4 text-white">
           <!--c--------------------------------------------------------------c--------------------------------------------------------------------------------------->
           <section id="hero">
             <!--NAV BAR PRESA DA INDEX-->
@@ -216,70 +216,68 @@
           <!--c--------------------------------------------------------------c--------------------------------------------------------------------------------------->
         </section>
 
-        <aside class="col-md-2 d-none d-md-block bg-black text-white">
-          <div class="main-content">
-            <h1>Contenuto principale</h1>
-            <p>Qui c'è il tuo layout. Questo prende tutto lo spazio disponibile.</p>
+        <!-- SIDEBAR DESTRA -->
+        <aside class="col-lg-2 bg-black text-white" id="sidebar-destra">
+          <div class="main-content p-1">
+            <aside class="right-sidebar bg-black p-0">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <p class="m-0">Attività amici</p>
+                <div>
+                  <button class="btn p-1 text-light">
+                    <i class="fa-regular fa-id-badge"></i>
+                  </button>
+                  <button class="btn p-1 text-light">
+                    <i class="fa-solid fa-x"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- amico1 -->
+              <div class="d-flex gap-2 mb-3">
+                <img src="https://placedog.net/400" class="rounded-5" />
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <span>Charlie Hookham</span>
+                    <span class="text-secondary small">4 ore</span>
+                  </div>
+                  <div class="text-secondary small">
+                    In Camera · Yumi Zouma <br />
+                    <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                  </div>
+                </div>
+              </div>
+
+              <!-- amico2 -->
+              <div class="d-flex gap-2 mb-3">
+                <img src="https://placedog.net/500" class="rounded-5" />
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <span>lightdark02</span>
+                    <span class="text-secondary small">8 ore</span>
+                  </div>
+                  <div class="text-secondary small">
+                    Almed to Kill · Jade LeMac <br />
+                    <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                  </div>
+                </div>
+              </div>
+
+              <!-- amico3 -->
+              <div class="d-flex gap-2">
+                <img src="https://placedog.net/600" class="rounded-5" />
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <span>Valeria Traverso</span>
+                    <span class="text-secondary small">3 giorni</span>
+                  </div>
+                  <div class="text-secondary small">
+                    Now Kings · Sleeping Wolf <br />
+                    <i class="fa-solid fa-music"></i> Twint Badass mood
+                  </div>
+                </div>
+              </div>
+            </aside>
           </div>
-
-          <aside class="right-sidebar bg-black p-3">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <p class="m-0">Attività amici</p>
-              <div>
-                <button class="btn p-1 text-light">
-                  <i class="fa-regular fa-id-badge"></i>
-                </button>
-                <button class="btn p-1 text-light">
-                  <i class="fa-solid fa-x"></i>
-                </button>
-              </div>
-            </div>
-
-            <!-- amico1 -->
-            <div class="d-flex gap-2 mb-3">
-              <img src="https://placedog.net/400" class="rounded-5" />
-              <div class="flex-grow-1">
-                <div class="d-flex justify-content-between">
-                  <span>Charlie Hookham</span>
-                  <span class="text-secondary small">4 ore</span>
-                </div>
-                <div class="text-secondary small">
-                  In Camera · Yumi Zouma <br />
-                  <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
-                </div>
-              </div>
-            </div>
-
-            <!-- amico2 -->
-            <div class="d-flex gap-2 mb-3">
-              <img src="https://placedog.net/500" class="rounded-5" />
-              <div class="flex-grow-1">
-                <div class="d-flex justify-content-between">
-                  <span>lightdark02</span>
-                  <span class="text-secondary small">8 ore</span>
-                </div>
-                <div class="text-secondary small">
-                  Almed to Kill · Jade LeMac <br />
-                  <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
-                </div>
-              </div>
-            </div>
-
-            <!-- amico3 -->
-            <div class="d-flex gap-2">
-              <img src="https://placedog.net/600" class="rounded-5" />
-              <div class="flex-grow-1">
-                <div class="d-flex justify-content-between">
-                  <span>Valeria Traverso</span>
-                  <span class="text-secondary small">3 giorni</span>
-                </div>
-                <div class="text-secondary small">
-                  Now Kings · Sleeping Wolf <br />
-                  <i class="fa-solid fa-music"></i> Twint Badass mood
-                </div>
-              </div>
-            </div>
-          </aside>
         </aside>
       </div>
       <div class="player-wrapper player fixed-bottom container-fluid">
