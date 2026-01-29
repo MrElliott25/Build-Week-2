@@ -19,6 +19,15 @@ Pcard.forEach((card) => {
     GetFetch(Burl);
   });
 });
+// PER BOTTONE PLAY
+const btnplay = document.getElementById("PLAY");
+btnplay.addEventListener("click", () => {
+  const query = btnplay.dataset.query;
+  const Burl = MainUrl + encodeURIComponent(query);
+
+  GetFetch(Burl);
+});
+// FINE BOTTONE PLAY
 
 //funzione per fetch
 const GetFetch = function (url) {
