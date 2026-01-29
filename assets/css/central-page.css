@@ -9,7 +9,8 @@ li {
 }
 
 #colonna-principale {
-  background-color: #202020;
+  background: #000000;
+  background: linear-gradient(-1deg, rgba(0, 0, 0, 1) 0%, rgba(54, 54, 54, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 #album-novita {
