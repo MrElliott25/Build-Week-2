@@ -29,7 +29,7 @@ const stampatitolo = function (artista) {
      <div class="position-relative"> 
       <img src="${artista.picture_xl}" 
        class=" card-img-top" 
-       style="object-fit: cover;  z-index: -1;" 
+       style="object-fit: cover;" 
        alt="Foto di ${artista.name}">
         <div class="position-absolute bottom-0 start-0 text-start text-white p-3 p-md-5">
           <p><i class="fa-regular fa-circle-check"></i> Artista Verificato</p>
@@ -68,8 +68,9 @@ const stampacanzoni = function (track) {
       array.sort((a, b) => b.rank - a.rank);
       array.forEach((element) => {
         Container.innerHTML += `
-
-              <div class="row align-items-center py-3">
+        <div class="row align-items-center py-3">
+ <div class="col-12 col-md-8 col-lg-8">
+              <div class="row align-items-center justify-content-evenly hepy-3">
                 <div class="col-5 d-flex align-items-center">
                   <img src="${element.img}" style="width: 60px" class="me-3" />
                   <a href="album.html?AlbumID=${element.id}" class="text-decoration-none  text-white m-0">${element.title}</a>
