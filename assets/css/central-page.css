@@ -4,6 +4,10 @@ body {
   overflow-x: hidden;
 }
 
+li {
+  color: white;
+}
+
 #colonna-principale {
   background-color: #202020;
 }
