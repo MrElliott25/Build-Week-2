@@ -49,6 +49,7 @@ const stampacanzoni = function (tracks) {
   const row = document.getElementById("row-canzoni");
 
   tracks.forEach((track, index) => {
+    const num = track.duration / 60;
     row.innerHTML += `
       <div class="row mb-2">
         <div class="col">${index + 1}</div>
@@ -120,8 +121,9 @@ const applyAlbumColor = function (img) {
   const colors = getColors(context);
   const mostRecurrent = findMostRecurrentColor(colors);
   const hexColor = "#" + pad(mostRecurrent);
-
-  document.getElementById("hero").style.backgroundColor = hexColor;
+  const colore2 = "#131313";
+  const mioGradiente = `linear-gradient(to bottom, ${hexColor} 10% , ${colore2} 100% )`;
+  document.getElementById("hero").style.background = mioGradiente;
 };
 
 function formatTime(seconds) {

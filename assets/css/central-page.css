@@ -4,8 +4,15 @@ body {
   overflow-x: hidden;
 }
 
+li {
+  color: white;
+}
+.Mauro {
+  background: linear-gradient(-1deg, rgba(0, 0, 0, 1) 0%, rgba(54, 54, 54, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
 #colonna-principale {
-  background-color: #202020;
+  background: #000000;
+  background: linear-gradient(-1deg, rgba(0, 0, 0, 1) 0%, rgba(54, 54, 54, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 #album-novita {
@@ -20,6 +27,10 @@ body {
   border-radius: 7px 0px 0px 7px;
   max-width: 100px;
   max-height: 100px;
+}
+
+.puntatore {
+  cursor: pointer;
 }
 
 @media (min-width: 426px) and (max-width: 1439px) {
@@ -76,6 +87,7 @@ body {
 .card-album {
   background-color: #171717;
   min-width: 12rem;
+  cursor: pointer;
 }
 
 .foto-card {
@@ -240,4 +252,8 @@ ul li {
 .mobile-bottom-nav a.active,
 .mobile-bottom-nav a:hover {
   color: #fff;
+}
+
+.css-height {
+  height: 500px;
 }

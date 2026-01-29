@@ -26,7 +26,7 @@
       <span>Home</span>
     </a>
 
-    <a href="#">
+    <a href="search.html">
       <i class="bi bi-search"></i>
       <span>Cerca</span>
     </a>
@@ -56,12 +56,14 @@
             <div class="sidebar-top mb-3">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active fs-4" href="#">
+                  <a class="nav-link active fs-4" href="index.html">
                     <i class="bi bi-house-door me-2"></i> Home
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fs-4" href="#"> <i class="bi bi-search me-2"></i> Cerca </a>
+                  <a class="nav-link fs-4" href="search.html">
+                    <i class="bi bi-search me-2"></i> Cerca
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link fs-4" href="#">
@@ -222,10 +224,13 @@
                   />
                   Ernesto Scorzelli
                 </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul class="dropdown-menu bg-black text-white">
+                  <li>
+                    <a class="dropdown-item" href="search.html" style="color: white">Search Page</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="album.html" style="color: white">Album Page</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -238,6 +243,7 @@
               <div class="d-flex align-items-center gap-4">
                 <div class="d-flex align-items-center">
                   <img
+                    class="puntatore"
                     src="../assets/imgs//main/image-1.jpg"
                     alt="..."
                     height="200px"
@@ -276,29 +282,29 @@
 
             <!-- Section Buonasera -->
             <div class="row p-0 gap-3 justify-content-evenly">
-              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded">
+              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore">
                 <img src="../assets/imgs/main/image-2.jpg" alt="..." class="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">
                   pov: la tua estate e' un film
                 </p>
               </div>
-              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded">
+              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore">
                 <img src="../assets/imgs/main/image-3.jpg" alt="..." class="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">Massima Concentrazione</p>
               </div>
-              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded">
+              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore">
                 <img src="../assets/imgs/main/image-4.jpg" alt="..." class="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">Peaceful Piano</p>
               </div>
-              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded">
+              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore">
                 <img src="../assets/imgs/main/image-5.jpg" alt="..." class="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">lofi beats</p>
               </div>
-              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded">
+              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore">
                 <img src="../assets/imgs/main/image-6.jpg" alt="..." class="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">Jazz Vibes</p>
               </div>
-              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded">
+              <div class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore">
                 <img src="../assets/imgs/main/image-7.jpg" alt="..." class="foto-album-piccole" />
                 <p class="text-white fw-bold ms-3 sm text-truncate">Caffe' del Buongiorno</p>
               </div>
@@ -310,85 +316,109 @@
             <h3 class="text-white ms-3 mb-3 fs-5 fw-bold">Altro di cio' che ti piace</h3>
             <!-- Creazione riga cards -->
             <div class="container overflow-auto d-flex flex-nowrap gap-3 scrollbar-album">
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Sangue Giovane"
+              >
                 <img
                   src="../assets/imgs/main/image-8.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
                   <p class="card-title fw-bold">Sangue Giovane</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
                 </div>
               </div>
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Canta sotto la doccia"
+              >
                 <img
                   src="../assets/imgs/main/image-9.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
                   <p class="card-title fw-bold">Canta sotto la doccia</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
                 </div>
               </div>
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Operazione Buonumore"
+              >
                 <img
                   src="../assets/imgs/main/image-10.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
                   <p class="card-title fw-bold">Operazione Buonumore</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
                 </div>
               </div>
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Mercury"
+              >
                 <img
                   src="../assets/imgs/main/image-11.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
                   <p class="card-title fw-bold">MERCURY</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
                 </div>
               </div>
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Samuray Jay"
+              >
                 <img
                   src="../assets/imgs/main/image-12.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
                   <p class="card-title fw-bold">Samuray Jay</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
                 </div>
               </div>
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Pulizie di Casa"
+              >
                 <img
                   src="../assets/imgs/main/image-13.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
                   <p class="card-title fw-bold">Pulizie di Casa</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
@@ -398,88 +428,112 @@
           </div>
 
           <div class="container mt-4">
-            <h3 class="text-white mb-3 fs-5 fw-bold">Altro di cio' che ti piace</h3>
+            <h3 class="text-white mb-3 fs-5 fw-bold">Altro che potrebbe Piacerti</h3>
             <!-- Creazione riga cards -->
             <div class="container overflow-auto d-flex flex-nowrap gap-3 scrollbar-album">
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="A Night At The Opera"
+              >
                 <img
-                  src="../assets/imgs/main/image-14.jpg"
-                  class="card-img-top foro-card"
-                  alt="..."
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRhbcKeZZbHDYh79OLUuaPf2fBtrCnyZ4GQw&s"
+                  class="card-img-top foto-card"
+                  alt="queen"
                 />
                 <div class="card-body text-white">
-                  <p class="card-title fw-bold">Sangue Giovane</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-title fw-bold">A Night At The Opera</p>
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
                 </div>
               </div>
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Casa dolce Casa"
+              >
                 <img
                   src="../assets/imgs/main/image-15.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
-                  <p class="card-title fw-bold">Canta sotto la doccia</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-title fw-bold">Casa dolce Casa</p>
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
                 </div>
               </div>
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Operazione Buonumore"
+              >
                 <img
                   src="../assets/imgs/main/image-16.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
                   <p class="card-title fw-bold">Operazione Buonumore</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
                 </div>
               </div>
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Friday"
+              >
                 <img
                   src="../assets/imgs/main/image-17.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
-                  <p class="card-title fw-bold">MERCURY</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-title fw-bold">New Music Friday</p>
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
                 </div>
               </div>
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Estate 2022"
+              >
                 <img
                   src="../assets/imgs/main/image-18.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
-                  <p class="card-title fw-bold">Samuray Jay</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-title fw-bold">Estate 2022</p>
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
                 </div>
               </div>
-              <div class="card card-fixed card-album px-3 py-3" style="width: 14rem">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Street Culto"
+              >
                 <img
                   src="../assets/imgs/main/image-19.jpg"
-                  class="card-img-top foro-card"
+                  class="card-img-top foto-card"
                   alt="..."
                 />
                 <div class="card-body text-white">
-                  <p class="card-title fw-bold">Pulizie di Casa</p>
-                  <p class="card-text fs-6 text-truncate" id="p-card">
+                  <p class="card-title fw-bold">Street Culto</p>
+                  <p class="card-text fs-6 text-truncate p-card">
                     Some quick example text to build on the card title and make up the bulk of the
                     card’s content.
                   </p>
@@ -621,6 +675,7 @@
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/index.js"></script>
     <script src="../assets/js/player.js"></script>
   </body>
 </html>
