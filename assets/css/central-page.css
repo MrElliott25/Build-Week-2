@@ -7,7 +7,9 @@ body {
 li {
   color: white;
 }
-
+.Mauro {
+  background: linear-gradient(-1deg, rgba(0, 0, 0, 1) 0%, rgba(54, 54, 54, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
 #colonna-principale {
   background: #000000;
   background: linear-gradient(-1deg, rgba(0, 0, 0, 1) 0%, rgba(54, 54, 54, 1) 0%, rgba(0, 0, 0, 1) 100%);
