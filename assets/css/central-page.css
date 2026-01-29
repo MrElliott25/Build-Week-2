@@ -26,6 +26,10 @@ li {
   max-height: 100px;
 }
 
+.puntatore {
+  cursor: pointer;
+}
+
 @media (min-width: 426px) and (max-width: 1439px) {
   .foto-album-piccole {
     max-width: 80px;
@@ -80,6 +84,7 @@ li {
 .card-album {
   background-color: #171717;
   min-width: 12rem;
+  cursor: pointer;
 }
 
 .foto-card {
