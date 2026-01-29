@@ -6,6 +6,7 @@ cards.forEach((card) => {
   card.addEventListener("click", () => {
     const query = card.dataset.query;
     const Burl = MainUrl + encodeURIComponent(query);
+    console.log(query);
 
     //fetch
     fetch(Burl)
@@ -16,12 +17,11 @@ cards.forEach((card) => {
         return res.json();
       })
       .then((data) => {
-        console.log("dati ", data);
-
         const dati = data.data;
-        console.log(dati);
+        console.log(dati); //array da tot
         //altro codice da prendere
-        //window.location.href=`../../micro-componenti/album.html?AlbumID=${dati[0].album.id}`
+
+        window.location.href = `../../micro-componenti/album.html?AlbumID=${dati[0].album.id}`;
       })
       .catch((err) => {
         console.log("Errore catch", err);

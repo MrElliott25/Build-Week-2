@@ -49,6 +49,7 @@ const stampacanzoni = function (tracks) {
   const row = document.getElementById("row-canzoni");
 
   tracks.forEach((track, index) => {
+    const num = track.duration / 60;
     row.innerHTML += `
       <div class="row mb-2">
         <div class="col">${index + 1}</div>
@@ -57,7 +58,7 @@ const stampacanzoni = function (tracks) {
           <p>${track.artist.name}</p>
         </div>
         <div class="col">${track.rank}</div>
-        <div class="col">${track.duration}</div>
+        <div class="col">${num.toFixed(1)}</div>
       </div>
     `;
   });
