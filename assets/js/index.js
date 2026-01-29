@@ -1,9 +1,8 @@
-//collegare a home page
 //aggiungere le data-query
-const MainUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?";
+const MainUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 
-const cards = document.querySelectorAll("");
-cards.array.forEach((card) => {
+const cards = document.querySelectorAll(".card-album");
+cards.forEach((card) => {
   card.addEventListener("click", () => {
     const query = card.dataset.query;
     const Burl = MainUrl + encodeURIComponent(query);
@@ -22,11 +21,7 @@ cards.array.forEach((card) => {
         const dati = data.data;
         console.log(dati);
         //altro codice da prendere
-        /*
-        const map = document.querySelector(".mapp");
-        map.innerHTML += `
-      <a href="../../micro-componenti/album.html?AlbumID=${dati[0].album.id}" class="btn btn-primary w-100">VAI AI DETTAGLI</a>
-      `;*/
+        //window.location.href=`../../micro-componenti/album.html?AlbumID=${dati[0].album.id}`
       })
       .catch((err) => {
         console.log("Errore catch", err);
