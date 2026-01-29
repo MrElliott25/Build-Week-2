@@ -33,10 +33,10 @@ const stampatitolo = function (album) {
         class="image-fluid"
       />
     
-    <div class="col p-1 text-start">
-      <p>ALBUM</p>
-      <h1>${album.title}</h1>
-      <p><a class="text-decoration-none" href="./ArtistaPage.html?ArtistID=${album.artist.id}">${album.artist.name}</a> · ${album.tracks.data.length} brani</p>
+    <div class="ms-4 col p-1 text-start">
+      <p id="scritta-album">ALBUM</p>
+      <h1 class="nome-album">${album.title}</h1>
+      <p class="fw-bold"><a class="text-decoration-none" href="./ArtistaPage.html?ArtistID=${album.artist.id}">${album.artist.name}</a> · ${album.tracks.data.length} brani</p>
     </div>
   `;
 
