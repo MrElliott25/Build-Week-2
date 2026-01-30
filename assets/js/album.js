@@ -57,11 +57,11 @@ const stampacanzoni = function (tracks) {
     row.innerHTML += `
   <div class="row align-items-center py-2 text-white g-0 song-row px-2"> 
     <div class="col d-flex align-items-center">
-      <div class="text-secondary text-end me-3" style="width: 30px;">
+      <div class="text-secondary me-3" style="width: 30px;">
         ${index + 1}
       </div>
       
-      <div class="d-flex flex-column overflow-hidden">
+      <div class="d-flex flex-column overflow-hidden align-items-start">
         <div class="fw-semibold text-white text-truncate">${track.title}</div> 
         <div class="text-secondary small text-truncate">${track.artist.name}</div>
       </div>

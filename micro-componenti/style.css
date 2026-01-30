@@ -1,5 +1,5 @@
 .main-content-scroll {
-  height: 100vh;
+  height: 94vh;
   overflow-y: auto;
   background-color: #121212 !important;
 }
@@ -12,7 +12,7 @@
   border: none;
 }
 
-.characteristics-card h3 {
+.characteristics-card a {
   font-size: 1.2rem;
   padding: 15px;
   font-weight: bold;
