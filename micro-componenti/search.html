@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progetto U2-W3</title>
+    <link rel="stylesheet" href="../assets/css/central-page.css" />
+    <link rel="stylesheet" href="../assets/css/player.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../assets/css/central-page.css" />
+  </head>
+  <nav class="mobile-bottom-nav d-md-none">
+    <a href="index.html">
+      <i class="bi bi-house-door"></i>
+      <span>Home</span>
+    </a>
+
+    <a href="#" class="active">
+      <i class="bi bi-search"></i>
+      <span>Cerca</span>
+    </a>
+
+    <a href="#">
+      <i class="bi bi-collection"></i>
+      <span>Libreria</span>
+    </a>
+  </nav>
+  <body class="bg-black p-0">
+    <main class="container-fluid p-0">
+      <div class="row">
+        <!-- SIDEBAR SINISTRA -->
+        <aside class="col-lg-3 d-none d-lg-block p-0">
+          <nav class="sidebar flex-grow-1 fs-2">
+            <div class="dropdown d-none d-md-block px-3 pt-3">
+              <button class="btn btn-dark p-0" data-bs-toggle="dropdown">
+                <i class="bi bi-three-dots fs-4"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                <li><a class="dropdown-item" href="#">Account</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+            <!-- MENU -->
+            <div class="sidebar-top mb-2">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="./index.html"> <i class="bi bi-house-door me-2"></i> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active fs-5" href="./search.html"> <i class="bi bi-search me-2"></i> Cerca </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="#"> <i class="bi bi-collection me-2"></i> Libreria </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- AZIONI -->
+            <div class="mb-2 mt-3">
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-5 pb-3 pt-2 px-3"
+                ><img src="https://www.aisongmaker.io/_next/static/media/icon.71189d61.png" alt="" class="icon-img me-2" />
+                Crea playlist
+              </a>
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-5 pb-3 pt-2 px-3"
+                ><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840c489c9523ae48b2c3d96177" alt="" class="icon-img me-2" />
+                Brani che ti piacciono
+              </a>
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none fs-5 pb-3 pt-2 px-3"
+                ><img src="https://tse4.mm.bing.net/th/id/OIP.JyK9dWOfKvowsZeLB5u9OAHaHa?pid=Api&P=0&h=180" alt="" class="icon-img me-2" />
+                I tuoi episodi
+              </a>
+            </div>
+            <hr class="text-secondary my-2" />
+
+            <!-- PLAYLIST SCROLL -->
+            <div class="sidebar-scroll">
+              <ul class="playlist-list text-secondary fs-4 list-style-none ps-3">
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li class="mb-2">Francesco Guccini Mix</li>
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li class="mb-2">Francesco Guccini Mix</li>
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li class="mb-2">Francesco Guccini Mix</li>
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li>Francesco Guccini Mix</li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+        <section class="col-lg-7 flex-grow-1 main-content-scroll p-4" style="height: 92vh">
+          <div class="search-container">
+            <i class="bi bi-search"></i>
+            <input type="text" id="mainSearch" class="search-input" placeholder="Cosa vuoi ascoltare?" />
+          </div>
+          <div class="container-fluid py-3 px-2">
+            <h2 class="text-white mb-4 fw-bold">Sfoglia tutto</h2>
+
+            <div class="row g-3">
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #dc148c">
+                  <a class="card-title d-block text-decoration-none">Musica</a>
+                  <img src="../assets/imgs/search/image-1.jpeg" class="card-img" alt="Musica" />
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #006450">
+                  <a class="card-title d-block text-decoration-none">Podcast</a>
+                  <img src="../assets/imgs/main/image-2.jpg" class="card-img" alt="Podcast" />
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #8400e7">
+                  <a class="card-title d-block text-decoration-none">Eventi dal vivo</a>
+                  <img src="../assets/imgs/main/image-3.jpg" class="card-img" alt="Eventi" />
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #1e3264">
+                  <a class="card-title d-block text-decoration-none">Realizzata per te</a>
+                  <img src="../assets/imgs/search/image-5.jpg" class="card-img" alt="Per te" />
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #608108">
+                  <a class="card-title d-block text-decoration-none">Nuove uscite</a>
+                  <img src="../assets/imgs/main/image-6.jpg" class="card-img" alt="Uscite" />
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #e61e32">
+                  <a class="card-title d-block text-decoration-none">Hip Hop</a>
+                  <img src="../assets/imgs/main/image-7.jpg" class="card-img" alt="Hip Hop" />
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #af2896">
+                  <a class="card-title d-block text-decoration-none">Pop</a>
+                  <img src="../assets/imgs/search/image-8.jpg" class="card-img" alt="Pop" />
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #7d4b32">
+                  <a class="card-title d-block text-decoration-none">Indie</a>
+                  <img src="../assets/imgs/search/image-9.jpg" class="card-img" alt="Indie" />
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #e61e32">
+                  <a class="card-title d-block text-decoration-none">Rock</a>
+                  <img src="../assets/imgs/search/image-10.jpg" class="card-img" alt="Rock" />
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #af2896">
+                  <a class="card-title d-block text-decoration-none">Studenti</a>
+                  <img src="../assets/imgs/search/image-37.jpeg" class="card-img" alt="Studenti" />
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #a56752">
+                  <a class="card-title d-block text-decoration-none">Concentrazione</a>
+                  <img src="../assets/imgs/search/image-38.jpg" class="card-img" alt="Concentrazione" />
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 card-item">
+                <div class="characteristics-card" style="background-color: #5179a1">
+                  <a class="card-title d-block text-decoration-none">A casa</a>
+                  <img src="../assets/imgs/search/image-39.jpg" class="card-img" alt="A casa" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 px-2">
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #7d4b32">
+                <a class="card-title d-block text-decoration-none">Classifica</a>
+                <img src="../assets/imgs/search/image-40.jpg" class="card-img" alt="Classifica" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #8d67ab">
+                <a class="card-title d-block text-decoration-none">Classifiche</a>
+                <img src="../assets/imgs/search/image-11.jpg" class="card-img" alt="Classifiche" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #0d73ec">
+                <a class="card-title d-block text-decoration-none">Classi-poadcast</a>
+                <img src="../assets/imgs/search/image-12.jpg" class="card-img" alt="Classi-poadcast" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #8e66ac">
+                <a class="card-title d-block text-decoration-none">Nuove uscite poadcast</a>
+                <img src="../assets/imgs/search/image-13.jpeg" class="card-img" alt="Nuove uscite" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #608108">
+                <a class="card-title d-block text-decoration-none">Video poadcast</a>
+                <img src="../assets/imgs/search/image-14.jpg" class="card-img" alt="Video poadcast" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #0d73ec">
+                <a class="card-title d-block text-decoration-none">Anime</a>
+                <img src="../assets/imgs/search/image-30.jpg" class="card-img" alt="Anime" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #e61e32">
+                <a class="card-title d-block text-decoration-none">Anni</a>
+                <img src="../assets/imgs/search/image-31.jpg" class="card-img" alt="Anni" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #b06239">
+                <a class="card-title d-block text-decoration-none">Relax</a>
+                <img src="../assets/imgs/search/image-32.jpg" class="card-img" alt="Relax" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #1e3264">
+                <a class="card-title d-block text-decoration-none">Amore</a>
+                <img src="../assets/imgs/search/image-33.jpg" class="card-img" alt="Amore" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #148a08">
+                <a class="card-title d-block text-decoration-none">EQUAL</a>
+                <img src="../assets/imgs/search/image-15.jpg" class="card-img" alt="Equal" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #e13300">
+                <a class="card-title d-block text-decoration-none">Mood</a>
+                <img src="../assets/imgs/main/image-16.jpg" class="card-img" alt="Mood" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #006450">
+                <a class="card-title d-block text-decoration-none">Autori</a>
+                <img src="../assets/imgs/search/image-34.jpg" class="card-img" alt="Autori" />
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 px-2 py-3">
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #006450">
+                <a class="card-title d-block text-decoration-none">K-POP</a>
+                <img src="../assets/imgs/search/image-35.jpg" class="card-img" alt="K-POP" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #8d67ab">
+                <a class="card-title d-block text-decoration-none">Jazz</a>
+                <img src="../assets/imgs/search/image-36.jpg" class="card-img" alt="Jazz" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #006450">
+                <a class="card-title d-block text-decoration-none">Dance elettronica</a>
+                <img src="../assets/imgs/search/image-17.jpg" class="card-img" alt="Dance elettronica" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #8d67ab">
+                <a class="card-title d-block text-decoration-none">gasa un botto</a>
+                <img src="../assets/imgs/search/image-41.jpg" class="card-img" alt="gasa un botto" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #006450">
+                <a class="card-title d-block text-decoration-none">preferiti</a>
+                <img src="../assets/imgs/search/image-43.png" class="card-img" alt="preferiti" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #006450">
+                <a class="card-title d-block text-decoration-none">Scopri</a>
+                <img src="../assets/imgs/search/image-18.jpg" class="card-img" alt="Scopri" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #0d73ec">
+                <a class="card-title d-block text-decoration-none">Di tendenza</a>
+                <img src="../assets/imgs/search/image-19.jpg" class="card-img" alt="Di tendenza" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #8e66ac">
+                <a class="card-title d-block text-decoration-none">Fresh Finds</a>
+                <img src="../assets/imgs/search/image-20.jpg" class="card-img" alt="Fresh Finds" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #8d67ab">
+                <a class="card-title d-block text-decoration-none">Mix Creato Da</a>
+                <img src="../assets/imgs/search/image-21.jpg" class="card-img" alt="Mix" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #503750">
+                <a class="card-title d-block text-decoration-none">R&B</a>
+                <img src="../assets/imgs/search/image-22.jpg" class="card-img" alt="Rb" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #0d73ec">
+                <a class="card-title d-block text-decoration-none">LATINA</a>
+                <img src="../assets/imgs/search/image-23.jpg" class="card-img" alt="LATINA" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #e13300">
+                <a class="card-title d-block text-decoration-none">Sanremo</a>
+                <img src="../assets/imgs/search/image-24.jpg" class="card-img" alt="Sanremo" />
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 px-2">
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #006450">
+                <a class="card-title d-block text-decoration-none">Dance elettronica</a>
+                <img src="../assets/imgs/search/image-17.jpg" class="card-img" alt="Dance elettronica" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #006450">
+                <a class="card-title d-block text-decoration-none">Scopri</a>
+                <img src="../assets/imgs/search/image-18.jpg" class="card-img" alt="Scopri" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #006450">
+                <a class="card-title d-block text-decoration-none">Scopri</a>
+                <img src="../assets/imgs/search/image-18.jpg" class="card-img" alt="Scopri" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #e13300">
+                <a class="card-title d-block text-decoration-none">Sanremo</a>
+                <img src="../assets/imgs/search/image-24.jpg" class="card-img" alt="Sanremo" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #006450">
+                <a class="card-title d-block text-decoration-none">Scopri</a>
+                <img src="../assets/imgs/search/image-18.jpg" class="card-img" alt="Scopri" />
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #b06239">
+                <a class="card-title d-block text-decoration-none">Relax</a>
+                <img src="../assets/imgs/search/image-32.jpg" class="card-img" alt="Relax" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #0d73ec">
+                <a class="card-title d-block text-decoration-none">Di tendenza</a>
+                <img src="../assets/imgs/search/image-19.jpg" class="card-img" alt="Di tendenza" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #8e66ac">
+                <a class="card-title d-block text-decoration-none">Fresh Finds</a>
+                <img src="../assets/imgs/search/image-20.jpg" class="card-img" alt="Fresh Finds" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #8d67ab">
+                <a class="card-title d-block text-decoration-none">Mix Creato Da</a>
+                <img src="../assets/imgs/search/image-21.jpg" class="card-img" alt="Mix" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #503750">
+                <a class="card-title d-block text-decoration-none">R&B</a>
+                <img src="../assets/imgs/search/image-22.jpg" class="card-img" alt="Rb" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #0d73ec">
+                <a class="card-title d-block text-decoration-none">LATINA</a>
+                <img src="../assets/imgs/search/image-23.jpg" class="card-img" alt="LATINA" />
+              </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 card-item">
+              <div class="characteristics-card" style="background-color: #e13300">
+                <a class="card-title d-block text-decoration-none">Sanremo</a>
+                <img src="../assets/imgs/search/image-24.jpg" class="card-img" alt="Sanremo" />
+              </div>
+            </div>
+          </div>
+          <div class="player-wrapper player fixed-bottom container-fluid">
+            <div class="d-none d-md-flex align-items-center justify-content-between h-100">
+              <div class="d-flex align-items-center" style="width: 30%">
+                <img src="" class="rounded me-3 player-img" alt="Cover" />
+                <div class="overflow-hidden">
+                  <div class="fw-bold text-truncate songname" style="font-size: 0.9rem">Nome brano in JS</div>
+                  <div class="small text-secondary artist">Nome artista in JS</div>
+                </div>
+                <i class="bi bi-heart ms-4 icon-btn"></i>
+              </div>
+
+              <div class="d-flex flex-column align-items-center flex-grow-1 px-4">
+                <div class="d-flex align-items-center mb-1">
+                  <i class="bi bi-shuffle mx-3 icon-btn small"></i>
+                  <i class="bi bi-skip-start-fill mx-2 h4 mb-0 icon-btn"></i>
+                  <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center mx-2" style="width: 35px; height: 35px">
+                    <i class="bi bi-play-fill text-dark play"></i>
+                  </button>
+                  <i class="bi bi-skip-end-fill mx-2 h4 mb-0 icon-btn"></i>
+                  <i class="bi bi-repeat mx-3 icon-btn small"></i>
+                </div>
+                <div class="d-flex align-items-center w-100">
+                  <span class="small text-secondary me-2 tempo">0:00</span>
+                  <div class="progress-bar-custom flex-grow-1">
+                    <div class="progress-fill"></div>
+                  </div>
+                  <span class="small text-secondary ms-2 tempo-max">00:00</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-end" style="width: 30%">
+                <i class="bi bi-mic me-3 icon-btn small"></i>
+                <i class="bi bi-view-list me-3 icon-btn small"></i>
+                <i class="bi bi-speaker me-3 icon-btn small"></i>
+                <i class="bi bi-volume-up me-2 icon-btn"></i>
+                <div class="progress-bar-custom" id="volume-bar" style="width: 100px">
+                  <div class="progress-fill" id="volume-bar-fill"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex d-md-none align-items-center justify-content-between">
+              <div class="d-flex align-items-center flex-grow-1 overflow-hidden">
+                <img src="" class="rounded me-2 player-img pe-2" alt="Cover" />
+                <div class="track-info-mobile">
+                  <span class="fw-bold small songname">Brano in JS</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-laptop icon-btn"></i>
+                <i class="bi bi-heart icon-btn"></i>
+                <i class="bi bi-play-fill h3 mb-0 text-white play"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="col-lg-2 d-none d-lg-block bg-black text-white" id="sidebar-destra">
+          <aside class="right-sidebar bg-black p-3">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="m-0">Attività amici</p>
+              <div>
+                <button class="btn p-1 text-light">
+                  <i class="fa-regular fa-id-badge"></i>
+                </button>
+                <button class="btn p-1 text-light">
+                  <i class="fa-solid fa-x"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- amico1 -->
+            <div class="d-flex gap-2 mb-3">
+              <img src="https://placedog.net/400" class="rounded-5" />
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <span>Charlie Hookham</span>
+                  <span class="text-secondary small">4 ore</span>
+                </div>
+                <div class="text-secondary small">
+                  In Camera · Yumi Zouma <br />
+                  <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                </div>
+              </div>
+            </div>
+
+            <!-- amico2 -->
+            <div class="d-flex gap-2 mb-3">
+              <img src="https://placedog.net/500" class="rounded-5" />
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <span>lightdark02</span>
+                  <span class="text-secondary small">8 ore</span>
+                </div>
+                <div class="text-secondary small">
+                  Almed to Kill · Jade LeMac <br />
+                  <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                </div>
+              </div>
+            </div>
+
+            <!-- amico3 -->
+            <div class="d-flex gap-2">
+              <img src="https://placedog.net/600" class="rounded-5" />
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <span>Valeria Traverso</span>
+                  <span class="text-secondary small">3 giorni</span>
+                </div>
+                <div class="text-secondary small">
+                  Now Kings · Sleeping Wolf <br />
+                  <i class="fa-solid fa-music"></i> Twint Badass mood
+                </div>
+              </div>
+            </div>
+          </aside>
+        </aside>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/player.js"></script>
+  </body>
+</html>

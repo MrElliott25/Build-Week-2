@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progetto U2-W3</title>
+    <link rel="stylesheet" href="../assets/css/player.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/central-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <nav class="mobile-bottom-nav d-lg-none">
+    <a href="#" class="active">
+      <i class="bi bi-house-door"></i>
+      <span>Home</span>
+    </a>
+
+    <a href="search.html">
+      <i class="bi bi-search"></i>
+      <span>Cerca</span>
+    </a>
+
+    <a href="#">
+      <i class="bi bi-collection"></i>
+      <span>Libreria</span>
+    </a>
+  </nav>
+  <body class="p-0">
+    <main>
+      <div class="row">
+        <!-- SIDEBAR SINISTRA -->
+        <aside class="col-lg-3 d-none d-lg-block p-0">
+          <nav class="sidebar flex-grow-1 fs-2">
+            <div class="dropdown d-none d-md-block px-3 pt-3">
+              <button class="btn btn-dark p-0" data-bs-toggle="dropdown">
+                <i class="bi bi-three-dots fs-4"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                <li><a class="dropdown-item" href="#">Account</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+            <!-- MENU -->
+            <div class="sidebar-top mb-2">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="./index.html">
+                    <i class="bi bi-house-door me-2"></i> Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active fs-5" href="./search.html">
+                    <i class="bi bi-search me-2"></i> Cerca
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5" href="#">
+                    <i class="bi bi-collection me-2"></i> Libreria
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- AZIONI -->
+            <div class="mb-2 mt-3">
+              <a
+                href="#"
+                class="d-flex align-items-center text-white text-decoration-none fs-5 pb-3 pt-2 px-3"
+                ><img
+                  src="https://www.aisongmaker.io/_next/static/media/icon.71189d61.png"
+                  alt=""
+                  class="icon-img me-2"
+                />
+                Crea playlist
+              </a>
+              <a
+                href="#"
+                class="d-flex align-items-center text-white text-decoration-none fs-5 pb-3 pt-2 px-3"
+                ><img
+                  src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da840c489c9523ae48b2c3d96177"
+                  alt=""
+                  class="icon-img me-2"
+                />
+                Brani che ti piacciono
+              </a>
+              <a
+                href="#"
+                class="d-flex align-items-center text-white text-decoration-none fs-5 pb-3 pt-2 px-3"
+                ><img
+                  src="https://tse4.mm.bing.net/th/id/OIP.JyK9dWOfKvowsZeLB5u9OAHaHa?pid=Api&P=0&h=180"
+                  alt=""
+                  class="icon-img me-2"
+                />
+                I tuoi episodi
+              </a>
+            </div>
+            <hr class="text-secondary my-2" />
+
+            <!-- PLAYLIST SCROLL -->
+            <div class="sidebar-scroll">
+              <ul class="playlist-list text-secondary fs-4 list-style-none ps-3">
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li class="mb-2">Francesco Guccini Mix</li>
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li class="mb-2">Francesco Guccini Mix</li>
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li class="mb-2">Francesco Guccini Mix</li>
+                <li class="mb-2">early stage emily syndrome (sett-ott 2022)</li>
+                <li class="mb-2">Be The Young</li>
+                <li class="mb-2">"..." cit. Kimiko (lug-ago 2022)</li>
+                <li class="mb-2">saggio vibes 🎤🎧</li>
+                <li class="mb-2">main character energy (mag-giu 2022)</li>
+                <li class="mb-2">that fucking mood 🖤🕷</li>
+                <li class="mb-2">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</li>
+                <li class="mb-2">An Emily Winchester kind of mood ✨🍯</li>
+                <li class="mb-2">landing page (mar-apr 2022)</li>
+                <li class="mb-2">2021 lol</li>
+                <li class="mb-2">cosa cazzo vuol dire questa affermazione (gen-fe…)</li>
+                <li class="mb-2">honey and glass (nov-dic 2021)</li>
+                <li class="mb-2">(Revenge) Training Arc 🐺</li>
+                <li class="mb-2">Lidia 🤝 Emily</li>
+                <li class="mb-2">minecraft e nintendo switch (sep-oct 2021)</li>
+                <li class="mb-2">silvano d’orba? I hardly know her (lug-ago 2021)</li>
+                <li class="mb-2">Culo 2021</li>
+                <li class="mb-2">Frah Quintale Mix</li>
+                <li>Francesco Guccini Mix</li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+
+        <!-- MAIN (IL TUO, INVARIATO) KAKAKAKAKAKA -->
+        <section
+          class="overflow-auto col-md-7 p-0 flex-grow-1"
+          style="height: 40vh"
+          id="colonna-principale"
+        >
+          <!-- 🔴 QUI RESTA TUTTO IL TUO CODICE ESISTENTE -->
+          <nav
+            class="navbar mx-3 navbar-expand-lg navbar-dark d-flex flex-row justify-content-between"
+          >
+            <!-- Bottoni di sinistra -->
+            <div class="justify-content-start">
+              <button type="button" class="btn btn-outline-light rounded-circle btn-pages">
+                &lt;
+              </button>
+              <button type="button" class="btn btn-outline-light rounded-circle btn-pages">
+                &gt;
+              </button>
+            </div>
+            <!-- dropdown di destra -->
+            <div class="justify-content-end">
+              <div class="btn-group">
+                <button
+                  type="button"
+                  class="btn btn-dark dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="dropdown-central-page"
+                >
+                  <img
+                    src="../assets/imgs/main/image-1.jpg"
+                    alt="Foto profilo"
+                    class="rounded-circle me-2"
+                    width="30"
+                    height="30"
+                  />
+                  Ernesto Scorzelli
+                </button>
+                <ul class="dropdown-menu bg-black text-white">
+                  <li>
+                    <a class="dropdown-item" href="search.html" style="color: white">Search Page</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="album.html" style="color: white">Album Page</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Album principale novita' -->
+          <div class="container">
+            <div class="container d-none d-md-block mt-3 py-3 rounded" id="album-novita">
+              <!-- immagine album -->
+              <div class="d-flex align-items-center gap-4">
+                <div class="d-flex align-items-center">
+                  <img
+                    class="puntatore"
+                    src="../assets/imgs//main/image-1.jpg"
+                    alt="VIOLA"
+                    height="200px"
+                    width="200px"
+                  />
+                  <!-- info principali -->
+                  <div class="ms-3 text-white">
+                    <p class="fw-bold">Album</p>
+                    <h1 id="text-primary">VIOLA (feat. Salmo)</h1>
+                    <p>Fedez, Salmo</p>
+                    <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+                    <button
+                      type="button"
+                      id="PLAY"
+                      class="btn btn-success text-black fw-bold me-2 btn-play-save"
+                      data-query="VIOLA feat. Salmo"
+                    >
+                      Play
+                    </button>
+                    <button type="button" class="btn btn-light fw-bold me-2 btn-play-save">
+                      Salva
+                    </button>
+                    <button type="button" class="btn me-2" id="tree-points">
+                      <i class="bi bi-three-dots"></i>
+                    </button>
+                  </div>
+                </div>
+                <button type="button" class="btn align-self-start ms-auto" id="nascondi-annunci">
+                  NASCONDI ANNUNCI
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 Album piu ascoltati -->
+          <div class="container mt-4">
+            <h2 class="text-white mb-3" id="buonasera">Buonasera</h2>
+
+            <!-- Section Buonasera -->
+            <div class="row p-0 gap-3 justify-content-evenly">
+              <div
+                class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore"
+                data-query="Troubleshooting"
+              >
+                <img
+                  src="../assets/imgs/main/image-2.jpg"
+                  alt="Troubleshooting"
+                  class="foto-album-piccole"
+                />
+                <p class="text-white fw-bold ms-3 sm text-truncate">
+                  pov: la tua estate e' un film
+                </p>
+              </div>
+              <div
+                class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore"
+                data-query="beethoven"
+              >
+                <img src="../assets/imgs/main/image-3.jpg" alt="..." class="foto-album-piccole" />
+                <p class="text-white fw-bold ms-3 sm text-truncate">Massima Concentrazione</p>
+              </div>
+              <div
+                class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore"
+                data-query="Peaceful Piano"
+              >
+                <img src="../assets/imgs/main/image-4.jpg" alt="..." class="foto-album-piccole" />
+                <p class="text-white fw-bold ms-3 sm text-truncate">Peaceful Piano</p>
+              </div>
+              <div
+                class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore"
+                data-query="lofi beats"
+              >
+                <img src="../assets/imgs/main/image-5.jpg" alt="..." class="foto-album-piccole" />
+                <p class="text-white fw-bold ms-3 sm text-truncate">lofi beats</p>
+              </div>
+              <div
+                class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore"
+                data-query="moonlight"
+              >
+                <img src="../assets/imgs/main/image-6.jpg" alt="..." class="foto-album-piccole" />
+                <p class="text-white fw-bold ms-3 sm text-truncate">Jazz Vibes</p>
+              </div>
+              <div
+                class="box-playlist col-md-3 p-0 d-flex align-items-center rounded puntatore"
+                data-query="Caffe' del Buongiorno"
+              >
+                <img src="../assets/imgs/main/image-7.jpg" alt="..." class="foto-album-piccole" />
+                <p class="text-white fw-bold ms-3 sm text-truncate">Caffe' del Buongiorno</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Altro di cio' che ti piace -->
+          <div class="container mt-4 p-0">
+            <h3 class="text-white ms-3 mb-3 fs-5 fw-bold">Altro di cio' che ti piace</h3>
+            <!-- Creazione riga cards -->
+            <div class="container overflow-auto d-flex flex-nowrap gap-3 scrollbar-album">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="zalone"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/e700192c2c74a291b44fb7151a94cb4d/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="the diamond collection"
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">The Diamond Collection</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="i nomi del diavolo"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/971c39d2a04b89d6b7028fed705d3676/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="i nomi del diavolo"
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">I Nomi del Diavolo</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="in the end"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/033a271b5ec10842c287827c39244fb5/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="..."
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">Hybrid Theory</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="starboy"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/134778e4c4f19ea71c82408300925a9a/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="Starboy"
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">Starboy</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="milano demons"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/b4d051a6ea1f6f47c068e621094595ad/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="shiva"
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">Milano Demons</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Pulizie di Casa"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/bae8af4ade838eb36f2d192f7f7dc350/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="..."
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">Kids' Songs</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-4">
+            <h3 class="text-white mb-3 fs-5 fw-bold">Altro che potrebbe Piacerti</h3>
+            <!-- Creazione riga cards -->
+            <div class="container overflow-auto d-flex flex-nowrap gap-3 scrollbar-album">
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="A Night At The Opera"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/01b6cf23e108bbe40d2c9d7890af4a64/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="queen"
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">Hooked On Classics Collection</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Evermore"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/5bced293f3a0568a5f5111f92cbca47f/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="Evermore"
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">Evermore</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Operazione Buonumore"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/f93f6bf678b479088e761850df0b341c/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="Operazione Buonumore"
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">Operazione Buonumore</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Friday"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/f0f19ba90f7cde0d35cc1dfdad7949c8/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="..."
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">Wish</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="zzala"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/253cb07deedc5797c9e16920df89a07c/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="zzala"
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">Zzala</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="card card-fixed card-album px-3 py-3"
+                style="width: 14rem"
+                data-query="Street Culto"
+              >
+                <img
+                  src="https://cdn-images.dzcdn.net/images/cover/9f692b7aa0e87b1aea71556429d5fee1/250x250-000000-80-0-0.jpg"
+                  class="card-img-top foto-card"
+                  alt="THE BATTLE KIZ"
+                />
+                <div class="card-body text-white">
+                  <p class="card-title fw-bold">THE BATTLE KIZ</p>
+                  <p class="card-text fs-6 text-truncate p-card">
+                    Some quick example text to build on the card title and make up the bulk of the
+                    card’s content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- div per spaziatura -->
+          <div class="spaziatura"></div>
+
+          <!-- fine div colonna principale  -->
+        </section>
+
+        <!-- SIDEBAR DESTRA -->
+        <aside class="col-lg-2 bg-black text-white" id="sidebar-destra">
+          <div class="main-content p-1">
+            <aside class="right-sidebar bg-black p-0">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <p class="m-0">Attività amici</p>
+                <div>
+                  <button class="btn p-1 text-light">
+                    <i class="fa-regular fa-id-badge"></i>
+                  </button>
+                  <button class="btn p-1 text-light">
+                    <i class="fa-solid fa-x"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- amico1 -->
+              <div class="d-flex gap-2 mb-3">
+                <img src="https://placedog.net/400" class="rounded-5" />
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <span>Charlie Hookham</span>
+                    <span class="text-secondary small">4 ore</span>
+                  </div>
+                  <div class="text-secondary small">
+                    In Camera · Yumi Zouma <br />
+                    <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                  </div>
+                </div>
+              </div>
+
+              <!-- amico2 -->
+              <div class="d-flex gap-2 mb-3">
+                <img src="https://placedog.net/500" class="rounded-5" />
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <span>lightdark02</span>
+                    <span class="text-secondary small">8 ore</span>
+                  </div>
+                  <div class="text-secondary small">
+                    Almed to Kill · Jade LeMac <br />
+                    <i class="fa-regular fa-circle-dot"></i> Twint Badass mood
+                  </div>
+                </div>
+              </div>
+
+              <!-- amico3 -->
+              <div class="d-flex gap-2">
+                <img src="https://placedog.net/600" class="rounded-5" />
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <span>Valeria Traverso</span>
+                    <span class="text-secondary small">3 giorni</span>
+                  </div>
+                  <div class="text-secondary small">
+                    Now Kings · Sleeping Wolf <br />
+                    <i class="fa-solid fa-music"></i> Twint Badass mood
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Player -->
+      <div class="player-wrapper player fixed-bottom container-fluid">
+        <div class="d-none d-md-flex align-items-center justify-content-between h-100">
+          <div class="d-flex align-items-center" style="width: 30%">
+            <img src="" class="rounded me-3 player-img" alt="Cover" />
+            <div class="overflow-hidden">
+              <div class="fw-bold text-truncate songname" style="font-size: 0.9rem">
+                Nome brano in JS
+              </div>
+              <div class="small text-secondary artist">Nome artista in JS</div>
+            </div>
+            <i class="bi bi-heart ms-4 icon-btn"></i>
+          </div>
+
+          <div class="d-flex flex-column align-items-center flex-grow-1 px-4">
+            <div class="d-flex align-items-center mb-1">
+              <i class="bi bi-shuffle mx-3 icon-btn small"></i>
+              <i class="bi bi-skip-start-fill mx-2 h4 mb-0 icon-btn"></i>
+              <button
+                class="btn btn-light rounded-circle d-flex align-items-center justify-content-center mx-2"
+                style="width: 35px; height: 35px"
+              >
+                <i class="bi bi-play-fill text-dark play"></i>
+              </button>
+              <i class="bi bi-skip-end-fill mx-2 h4 mb-0 icon-btn"></i>
+              <i class="bi bi-repeat mx-3 icon-btn small"></i>
+            </div>
+            <div class="d-flex align-items-center w-100">
+              <span class="small text-secondary me-2 tempo">0:00</span>
+              <div class="progress-bar-custom flex-grow-1"><div class="progress-fill"></div></div>
+              <span class="small text-secondary ms-2 tempo-max">00:00</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-end" style="width: 30%">
+            <i class="bi bi-mic me-3 icon-btn small"></i>
+            <i class="bi bi-view-list me-3 icon-btn small"></i>
+            <i class="bi bi-speaker me-3 icon-btn small"></i>
+            <i class="bi bi-volume-up me-2 icon-btn"></i>
+            <div class="progress-bar-custom" id="volume-bar" style="width: 100px">
+              <div class="progress-fill" id="volume-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex d-md-none align-items-center justify-content-between">
+          <div class="d-flex align-items-center flex-grow-1 overflow-hidden">
+            <img src="" class="rounded me-2 player-img pe-2" alt="Cover" />
+            <div class="track-info-mobile">
+              <span class="fw-bold small songname">Brano in JS</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-laptop icon-btn"></i>
+            <i class="bi bi-heart icon-btn"></i>
+            <i class="bi bi-play-fill h3 mb-0 text-white play"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/player.js"></script>
+  </body>
+</html>

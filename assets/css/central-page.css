@@ -1,5 +1,30 @@
+html,
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: white;
+}
+.Mauro {
+  background: linear-gradient(
+    -1deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(54, 54, 54, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
 #colonna-principale {
-  background-color: #202020;
+  background: #000000;
+  background: linear-gradient(
+    -1deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(54, 54, 54, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 #album-novita {
@@ -10,11 +35,24 @@
   letter-spacing: -1px;
 }
 
-#foto-album-piccole {
+.foto-album-piccole {
   border-radius: 7px 0px 0px 7px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
-#btn-pages {
+.puntatore {
+  cursor: pointer;
+}
+
+@media (min-width: 426px) and (max-width: 1439px) {
+  .foto-album-piccole {
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
+
+.btn-pages {
   background-color: #131313;
   border: none;
   color: grey;
@@ -30,7 +68,7 @@
   font-weight: bold;
 }
 
-#btn-play-save {
+.btn-play-save {
   font-size: small;
   border-radius: 25px;
   padding: 10px 25px;
@@ -48,14 +86,240 @@
   border-radius: 30px;
 }
 
-#box-playlist {
+.box-playlist {
   background-color: #2c2c2c;
 }
 
-#card {
-  background-color: #171717;
+@media (min-width: 320px) and (max-width: 575px) {
+  .box-playlist {
+    max-width: 85%;
+  }
 }
 
-#foto-card {
+.card-album {
+  background-color: #171717;
+  min-width: 12rem;
+  cursor: pointer;
+}
+
+.foto-card {
   border-radius: 7px;
+}
+
+.scrollbar-album {
+  scrollbar-width: none;
+}
+
+body {
+  background-color: #121212;
+  color: white;
+  margin: 0;
+}
+
+.spaziatura {
+  height: 100px;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.right-sidebar img {
+  width: 60px;
+}
+
+@media (min-width: 1300px) {
+  .container-cards {
+    overflow-x: auto;
+  }
+}
+
+/*  sidebar a destra */
+@media (min-width: 700px) {
+  .layout {
+    display: flex;
+  }
+
+  .main-content {
+    flex: 1;
+  }
+
+  .right-sidebar {
+    width: 320px;
+    display: block;
+  }
+}
+
+@media (max-width: 1919px) {
+  #sidebar-destra {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1919px) {
+  #colonna-principale {
+    width: calc(100% - 320px - 240px);
+  }
+}
+
+/* = sidebar nascosta */
+@media (min-width: 430px) and (max-width: 699px) {
+  .right-sidebar {
+    display: none;
+  }
+}
+
+/* SIDEBAR SINISTRA */
+.sidebar {
+  background-color: #000;
+  height: 92vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* LINK */
+.sidebar a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.icon-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+ul li {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.sidebar a:hover,
+.sidebar .nav-link.active {
+  color: #fff;
+}
+
+/* AZIONI */
+.sidebar-actions .sidebar-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* SCROLL SOLO PLAYLIST */
+.sidebar-scroll {
+  overflow-y: auto;
+  padding-right: 5px;
+  height: 64%;
+}
+.sidebar-scroll li {
+  color: #878787;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 3px;
+}
+
+/* MAIN */
+#colonna-principale {
+  background-color: #202020;
+  min-height: 100vh;
+}
+/* ALBUM R */
+#Master-A {
+  background-color: #202020;
+}
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #222;
+  z-index: 1000;
+}
+
+.mobile-bottom-nav a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-bottom-nav a i {
+  font-size: 1.3rem;
+}
+
+.mobile-bottom-nav a.active,
+.mobile-bottom-nav a:hover {
+  color: #fff;
+}
+
+#album-cover {
+  max-width: fit-content;
+  box-shadow: 0px 0px 50px 0px black;
+  padding: 0%;
+}
+
+#scritta-album {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.nome-album {
+  font-weight: bold;
+  font-size: 350%;
+}
+
+/* ALBUM SIMO */
+
+.pointer {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+}
+
+.pointer:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.number-cell {
+  height: 28px;
+}
+
+.pointer-number,
+.play-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.15s ease;
+}
+
+.play-icon {
+  opacity: 0;
+  font-size: 14px;
+}
+
+.pointer:hover .pointer-number {
+  opacity: 0;
+}
+
+.pointer:hover .play-icon {
+  opacity: 1;
 }
