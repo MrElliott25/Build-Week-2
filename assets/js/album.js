@@ -47,6 +47,8 @@ const stampatitolo = function (album) {
 
 // STAMPA CANZONI
 const stampacanzoni = function (tracks) {
+  console.log(tracks);
+
   const row = document.getElementById("row-canzoni");
   row.innerHTML = "";
 
