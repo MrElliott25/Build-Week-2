@@ -32,8 +32,8 @@ const stampatitolo = function (artista) {
        style="object-fit: cover;" 
        alt="Foto di ${artista.name}">
         <div class="position-absolute bottom-0 start-0 text-start text-white p-3 p-md-5">
-          <p><i class="fa-regular fa-circle-check"></i> Artista Verificato</p>
-          <h2 class="h3 h-md1 fs-1">${artista.name}</h2>
+          <p><i class="fa-regular fa-circle-check text-primary"></i> Artista Verificato</p>
+          <h2 class="h3 h-md1 mauro">${artista.name}</h2>
           <p>${artista.nb_fan} Ascoltatori Mensili</p>
         </div>
       </div>

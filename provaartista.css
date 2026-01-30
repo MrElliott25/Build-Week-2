@@ -31,7 +31,7 @@
 
 #sezione-titolo p:first-child {
   font-size: 0.9rem;
-  color: #1db954;
+  color:white;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -41,9 +41,15 @@
   font-size: 0.95rem;
   color: #e0e0e0;
 }
+.mauro {
+  font-size: 150px;
+}
 
 @media (max-width: 768px) {
   #sezione-titolo > .position-relative {
     height: 220px;
+  }
+  .mauro {
+    font-size: 75px;
   }
 }
