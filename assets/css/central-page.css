@@ -285,3 +285,41 @@ ul li {
   font-weight: bold;
   font-size: 350%;
 }
+
+/* ALBUM SIMO */
+
+.pointer {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+}
+
+.pointer:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.number-cell {
+  height: 28px;
+}
+
+.pointer-number,
+.play-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.15s ease;
+}
+
+.play-icon {
+  opacity: 0;
+  font-size: 14px;
+}
+
+.pointer:hover .pointer-number {
+  opacity: 0;
+}
+
+.pointer:hover .play-icon {
+  opacity: 1;
+}

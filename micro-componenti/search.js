@@ -27,18 +27,15 @@ const GetData = function (query) {
 
         const title = card.querySelector(".card-title");
         const img = card.querySelector(".card-img");
-        const link = card.querySelector(".details-btn");
 
         if (result) {
           card.style.display = "block";
           title.innerText = result.title;
           img.src = result.album.cover_medium;
           img.alt = result.title;
+          title.href = `album.html?AlbumID=${result.album.id}`;
           if (card.classList.contains("d-none")) {
             card.classList.remove("d-none");
-          }
-          if (link) {
-            link.href = `../../micro-componenti/album.html?AlbumID=${result.album.id}`;
           }
         } else {
           card.classList.add("d-none");

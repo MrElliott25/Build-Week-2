@@ -55,27 +55,47 @@ const stampacanzoni = function (tracks) {
     const seconds = track.duration % 60;
 
     row.innerHTML += `
-  <div class="row align-items-center py-2 text-white g-0 song-row px-2"> 
-    <div class="col d-flex align-items-center">
-      <div class="text-secondary me-3" style="width: 30px;">
-        ${index + 1}
-      </div>
-      
-      <div class="d-flex flex-column overflow-hidden align-items-start">
-        <div class="fw-semibold text-white text-truncate">${track.title}</div> 
-        <div class="text-secondary small text-truncate">${track.artist.name}</div>
-      </div>
-    </div>
+              <div class="row align-items-center mb-2 py-2 px-0 pointer text-start">
+            <div class="col-1 position-relative number-cell ps-0">
+              <span class="pointer-number">${index + 1}</span>
+              <i class="fa-solid fa-play play-icon retriever"></i>
+              <p class="d-none trackvalue">${track.id}</p>
+              <p class="d-none albumvalue">${track.album.id}</p>
+            </div>
 
-    <div class="col-2 text-secondary  pe-3">
-      ${track.rank.toLocaleString()}
-    </div>
+            <div class="col-5 text-truncate">
+              <h5 class="m-0 text-white">
+                ${track.title}
+              </h5>
+              <p class="m-0 text-secondary">${track.artist.name}</p>
+            </div>
 
-    <div class="col-2 text-secondary small">
-      ${minutes}:${seconds.toString().padStart(2, "0")}
-    </div>
-  </div>
-`;
+            <div class="col-3 text-end">${track.rank.toLocaleString()}</div>
+            <div class="col-3 text-center"> ${minutes}:${seconds.toString().padStart(2, "0")}</div>
+          </div>`;
+
+    //     row.innerHTML += `
+    //   <div class="row align-items-center py-2 text-white g-0 song-row px-2">
+    //     <div class="col d-flex align-items-center">
+    //       <div class="text-secondary me-3" style="width: 30px;">
+    //         ${index + 1}
+    //       </div>
+
+    //       <div class="d-flex flex-column overflow-hidden align-items-start">
+    //         <div class="fw-semibold text-white text-truncate">${track.title}</div>
+    //         <div class="text-secondary small text-truncate">${track.artist.name}</div>
+    //       </div>
+    //     </div>
+
+    //     <div class="col-2 text-secondary  pe-3">
+    //
+    //     </div>
+
+    //     <div class="col-2 text-secondary small">
+    //       ${minutes}:${seconds.toString().padStart(2, "0")}
+    //     </div>
+    //   </div>
+    // `;
   });
 };
 /*
